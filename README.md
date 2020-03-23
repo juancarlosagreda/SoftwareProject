@@ -1,5 +1,5 @@
 # README.md
-A multi-interface, apache-tomcat web application, made for the lack of elderly in need for assistance and its market necessities. We built this application for our software engineering class, and we came up with the idea because
+A multi-interface, apache-tomcat web application, made for the elderly in need for assistance and its market necessities. We built this application for our software engineering class, and we came up with the idea because
 .
 .
 .
