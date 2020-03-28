@@ -13,3 +13,4 @@ A multi-interface, apache-tomcat web application, made for the elderly in need f
 
 3. Web application for caretakers of the elderly
   - Caretakers can accept, reject, and finish requests.
+  - Caretakers will be able to update their profile.
