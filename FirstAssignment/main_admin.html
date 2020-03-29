@@ -18,6 +18,86 @@
 
 <!-- Wrapper -->
 <div id="wrapper">
+
+<!-- Header Container
+================================================== -->
+<header id="header-container" class="fullwidth dashboard-header not-sticky">
+
+	<!-- Header -->
+	<div id="header">
+		<div class="container">
+
+			<!-- Left Side Content -->
+			<div class="left-side">
+
+				<!-- Logo -->
+				<div id="logo">
+					<a href="INICIO.html"><img src="images/logo.png" alt=""></a>
+				</div>
+
+
+
+				<!-- User Menu -->
+				<div class="header-widget">
+
+					<!-- Messages -->
+					<div class="header-notifications user-menu">
+						<div class="header-notifications-trigger">
+							<a href="#"><div class="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt=""></div></a>
+						</div>
+
+						<!-- Dropdown -->
+						<div class="header-notifications-dropdown">
+
+							<!-- User Status -->
+							<div class="user-status">
+
+								<!-- User Name / Avatar -->
+								<div class="user-details">
+									<div class="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt=""></div>
+									<div class="user-name">
+										Tom Smith <span>Administrator</span>
+									</div>
+								</div>
+
+								<!-- User Status Switcher -->
+								<div class="status-switch" id="snackbar-user-status">
+									<label class="user-online current-status">Online</label>
+									<label class="user-invisible">Invisible</label>
+									<!-- Status Indicator -->
+									<span class="status-indicator" aria-hidden="true"></span>
+								</div>
+						</div>
+
+						<ul class="user-menu-small-nav">
+							<li><a href="settings.html"><i class="icon-material-outline-settings"></i> Settings</a></li>
+							<li><a href="INICIO.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+						</ul>
+
+						</div>
+					</div>
+
+				</div>
+				<!-- User Menu / End -->
+
+
+				<!-- Mobile Navigation Button -->
+				<span class="mmenu-trigger">
+					<button class="hamburger hamburger--collapse" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</span>
+
+			</div>
+			<!-- Right Side Content / End -->
+
+		</div>
+	</div>
+	<!-- Header / End -->
+
+</header>
 <div class="clearfix"></div>
 <!-- Header Container / End -->
 
@@ -39,16 +119,16 @@
 
 						<ul data-submenu-title="Start">
 							<li><a href="main_admin.html"><i class="icon-material-outline-dashboard"></i> Requests</a></li>
-							<li><a href="clients_admin.html"><i class="icon-material-outline-question-answer"></i> Clients </a></li>
-							<li><a href="caretakers_admin.html"><i class="icon-material-outline-star-border"></i> Caretakers</a></li>
-							<li><a href="incidents_admin.html"><i class="icon-material-outline-rate-review"></i> Incidents</a></li>
+							<li><a href="Clients.html"><i class="icon-material-outline-question-answer"></i> Clients </a></li>
+							<li><a href="Caretakers.html"><i class="icon-material-outline-star-border"></i> Caretakers</a></li>
+							<li><a href="IncidentsList.html"><i class="icon-material-outline-rate-review"></i> Incidences</a></li>
 						</ul>
 
 
 
 						<ul data-submenu-title="Account">
-							<li><a href="admin_settings.html"><i class="icon-material-outline-settings"></i> Settings</a></li>
-							<li><a href="login.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+							<li><a href="settings.html"><i class="icon-material-outline-settings"></i> Settings</a></li>
+							<li><a href="INICIO.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
 						</ul>
 
 					</div>
@@ -70,11 +150,10 @@
 			<div class="dashboard-headline">
 				<h3>Caretaker Requests</h3>
 				<!--span class="margin-top-7">Bids for <a href="#">Food Delivery Mobile Application</a></span>
-
 				<!-- Breadcrumbs -->
 				<nav id="breadcrumbs" class="dark">
 					<ul>
-						<li><a href="#">Home</a></li>
+						<li><a href="main_admin.html">Home</a></li>
 						<!--li><a href="#">Dashboard</a></li-->
 						<li>Requests</li>
 					</ul>
@@ -109,7 +188,6 @@
 
 											<!-- Avatar -->
 											<div class="freelancer-avatar">
-												<div class="verified-badge"></div>
 												<a href="#"><img src="images/user-avatar-big-02.jpg" alt=""></a>
 											</div>
 
@@ -118,9 +196,16 @@
 												<h4><a href="#">David Peterson <img class="flag" src="images/flags/de.svg" alt="" title="Germany" data-tippy-placement="top"></a></h4>
 
 												<!-- Details -->
-												<span class="freelancer-detail-item"><a href="#"><i class="icon-feather-mail"></i> david@hotmail.com</a></span>
-												<span class="freelancer-detail-item"><i class="icon-feather-phone"></i> (+42) 546-221-678</span>
+												<span class="freelancer-detail-item"><a href="#"><i class="icon-feather-mail"></i> david@example.com</a></span>
+												<span class="freelancer-detail-item"><i class="icon-feather-phone"></i> (+34) 423-382-138</span>
 
+
+
+												<!-- Bid Details -->
+												<ul class="dashboard-task-info bid-info">
+													<li><strong>$10</strong><span>Per Hour</span></li>
+													<li><strong>5 Days per Week</strong><span>Availability</span></li>
+												</ul>
 
 												<!-- Buttons -->
 												<div class="buttons-to-right always-visible margin-top-25 margin-bottom-0">
@@ -147,10 +232,19 @@
 												<h4><a href="#">Oldrich Ćuk <img class="flag" src="images/flags/sk.svg" alt="" title="Slovakia" data-tippy-placement="top"></a></h4>
 
 												<!-- Details -->
-												<span class="freelancer-detail-item"><a href="#"><i class="icon-feather-mail"></i> oldrich@hotmail.com</a></span>
-												<span class="freelancer-detail-item"><i class="icon-feather-phone"></i> (+421) 123-456-789</span>
+												<span class="freelancer-detail-item"><a href="#"><i class="icon-feather-mail"></i> oldrich@example.com</a></span>
+												<span class="freelancer-detail-item"><i class="icon-feather-phone"></i> (+34) 123-456-789</span>
 
 
+												<!-- Rating -->
+												<br>
+												<span class="company-not-rated">Minimum of 3 votes required</span>
+
+												<!-- Bid Details -->
+												<ul class="dashboard-task-info bid-info">
+													<li><strong>$8</strong><span>Per Hour</span></li>
+													<li><strong>4 Days per Week</strong><span>Availability</span></li>
+												</ul>
 
 												<!-- Buttons -->
 												<div class="buttons-to-right always-visible margin-top-25 margin-bottom-0">
@@ -169,7 +263,6 @@
 
 											<!-- Avatar -->
 											<div class="freelancer-avatar">
-												<div class="verified-badge"></div>
 												<a href="#"><img src="images/user-avatar-placeholder.png" alt=""></a>
 											</div>
 
@@ -181,6 +274,13 @@
 												<span class="freelancer-detail-item"><a href="#"><i class="icon-feather-mail"></i> kuba@example.com</a></span>
 												<span class="freelancer-detail-item"><i class="icon-feather-phone"></i> (+48) 123-456-789</span>
 
+
+
+												<!-- Bid Details -->
+												<ul class="dashboard-task-info bid-info">
+													<li><strong>$12</strong><span>Per Hour</span></li>
+													<li><strong>6 Days per Week</strong><span>Availability</span></li>
+												</ul>
 
 												<!-- Buttons -->
 												<div class="buttons-to-right always-visible margin-top-25 margin-bottom-0">

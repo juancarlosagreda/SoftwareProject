@@ -111,8 +111,6 @@
 		<div class="dashboard-sidebar-inner" data-simplebar>
 			<div class="dashboard-nav-container">
 
-
-
 				<!-- Navigation -->
 				<div class="dashboard-nav">
 					<div class="dashboard-nav-inner">
@@ -148,30 +146,17 @@
 
 			<!-- Dashboard Headline -->
 			<div class="dashboard-headline">
-				<h3>Manage Caretakers</h3>
-				<div class="col-xl-6 col-md-6">
-					<div class="section-headline margin-top-45 margin-bottom-12">
-					</div>
-
-					<select class="selectpicker" data-live-search="true">
-						<option>Madrid</option>
-						<option>Barcelona</option>
-						<option>San Sebastian</option>
-						<option>Logroño</option>
-						<option>Cadiz</option>
-						<option>Valencia</option>
-					</select>
-				</div>
+				<h3>Settings</h3>
 
 				<!-- Breadcrumbs -->
 				<nav id="breadcrumbs" class="dark">
 					<ul>
 						<li><a href="main_admin.html">Home</a></li>
-						<li>Manage Caretakers</li>
+
+						<li>Settings</li>
 					</ul>
 				</nav>
 			</div>
-
 
 			<!-- Row -->
 			<div class="row">
@@ -182,79 +167,117 @@
 
 						<!-- Headline -->
 						<div class="headline">
-							<h3><i class="icon-material-outline-business-center"></i> Caretakers list</h3>
+							<h3><i class="icon-material-outline-account-circle"></i> My Account</h3>
 						</div>
 
-						<div class="content">
-							<ul class="dashboard-box-list">
-								<li>
-									<!-- Job Listing -->
-									<div class="job-listing">
+						<div class="content with-padding padding-bottom-0">
 
-										<!-- Job Listing Details -->
-										<div class="job-listing-details">
+							<div class="row">
 
-											<!-- Logo -->
-<!-- 											<a href="#" class="job-listing-company-logo">
-												<img src="images/company-logo-05.png" alt="">
-											</a> -->
+								<div class="col-auto">
+									<div class="avatar-wrapper" data-tippy-placement="bottom" title="Change Avatar">
+										<img class="profile-pic" src="images/user-avatar-placeholder.png" alt="" />
+										<div class="upload-button"></div>
+										<input class="file-upload" type="file" accept="image/*"/>
+									</div>
+								</div>
 
-											<!-- Details -->
-											<div class="job-listing-description">
-												<h3 class="job-listing-title"><a href="profile.html">Nombre Cuidador 1 </a> <span class="dashboard-status-button green">Available</span></h3>
+								<div class="col">
+									<div class="row">
 
-												<!-- Job Listing Footer -->
-												<div class="job-listing-footer">
-													<ul>
-														<li><i class="icon-material-outline-date-range"></i> Registered on 10 July, 2019</li>
-													</ul>
+										<div class="col-xl-6">
+											<div class="submit-field">
+												<h5>First Name</h5>
+												<input type="text" class="with-border" value="Tom">
+											</div>
+										</div>
+
+										<div class="col-xl-6">
+											<div class="submit-field">
+												<h5>Last Name</h5>
+												<input type="text" class="with-border" value="Smith">
+											</div>
+										</div>
+
+										<div class="col-xl-6">
+											<!-- Account Type -->
+											<div class="submit-field">
+												<h5>Account Type</h5>
+												<div class="account-type">
+													<div>
+														<input type="radio" name="account-type-radio" id="freelancer-radio" class="account-type-radio" checked/>
+														<label for="freelancer-radio" class="ripple-effect-dark"><i class="icon-material-outline-account-circle"></i> Administrator</label>
+													</div>
+
+
 												</div>
 											</div>
 										</div>
-									</div>
 
-									<!-- Buttons -->
-									<div class="buttons-to-right always-visible">
-										<a href="noincidences.html" class="button ripple-effect"><i class="icon-material-outline-supervisor-account"></i> Incidences <span class="button-info">0</span></a>
-										<a href="#" class="button gray ripple-effect ico" title="Remove Bid" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
-
-									</div>
-								</li>
-
-
-
-								<li>
-									<!-- Job Listing -->
-									<div class="job-listing">
-
-										<!-- Job Listing Details -->
-										<div class="job-listing-details">
-
-											<!-- Details -->
-											<div class="job-listing-description">
-												<h3 class="job-listing-title"><a href="#">Nombre Caretaker 2</a> <span class="dashboard-status-button red">Unavailable</span></h3>
-
-												<!-- Job Listing Footer -->
-												<div class="job-listing-footer">
-													<ul>
-														<li><i class="icon-material-outline-date-range"></i> Registered on 10 September, 2019</li>
-													</ul>
-												</div>
+										<div class="col-xl-6">
+											<div class="submit-field">
+												<h5>Email</h5>
+												<input type="text" class="with-border" value="tom@example.com">
 											</div>
 										</div>
-									</div>
 
-									<!-- Buttons -->
-									<div class="buttons-to-right always-visible">
-										<a href="incidenceperworker.html" class="button ripple-effect"><i class="icon-material-outline-supervisor-account"></i> Incidences <span class="button-info">7</span></a>
-										<a href="#" class="button gray ripple-effect ico" title="Remove Bid" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
 
 									</div>
-								</li>
+								</div>
+							</div>
 
-							</ul>
 						</div>
 					</div>
+				</div>
+
+
+
+				<!-- Dashboard Box -->
+				<div class="col-xl-12">
+					<div id="test1" class="dashboard-box">
+
+						<!-- Headline -->
+						<div class="headline">
+							<h3><i class="icon-material-outline-lock"></i> Password & Security</h3>
+						</div>
+
+						<div class="content with-padding">
+							<div class="row">
+								<div class="col-xl-4">
+									<div class="submit-field">
+										<h5>Current Password</h5>
+										<input type="password" class="with-border">
+									</div>
+								</div>
+
+								<div class="col-xl-4">
+									<div class="submit-field">
+										<h5>New Password</h5>
+										<input type="password" class="with-border">
+									</div>
+								</div>
+
+								<div class="col-xl-4">
+									<div class="submit-field">
+										<h5>Repeat New Password</h5>
+										<input type="password" class="with-border">
+									</div>
+								</div>
+
+								<div class="col-xl-12">
+									<div class="checkbox">
+										<input type="checkbox" id="two-step" checked>
+										<label for="two-step"><span class="checkbox-icon"></span> Enable Two-Step Verification via Email</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Button -->
+				<div class="col-xl-12">
+					<a href="main_admin.html" class="button ripple-effect big margin-top-30">Save Changes</a>
 				</div>
 
 			</div>
@@ -264,8 +287,7 @@
 			<div class="dashboard-footer-spacer"></div>
 			<div class="small-footer margin-top-15">
 				<div class="small-footer-copyrights">
-					© 2019 <strong>Help Hunters
-					</strong>. All Rights Reserved.
+					© 2019 <strong>Hireo</strong>. All Rights Reserved.
 				</div>
 				<ul class="footer-social-links">
 					<li>
@@ -332,3 +354,109 @@ $('#snackbar-user-status label').click(function() {
 		duration: 3000,
 		textColor: '#fff',
 		backgroundColor: '#383838'
+	});
+});
+</script>
+
+<!-- Chart.js // documentation: http://www.chartjs.org/docs/latest/ -->
+<script src="js/chart.min.js"></script>
+<script>
+	Chart.defaults.global.defaultFontFamily = "Nunito";
+	Chart.defaults.global.defaultFontColor = '#888';
+	Chart.defaults.global.defaultFontSize = '14';
+
+	var ctx = document.getElementById('chart').getContext('2d');
+
+	var chart = new Chart(ctx, {
+		type: 'line',
+
+		// The data for our dataset
+		data: {
+			labels: ["January", "February", "March", "April", "May", "June"],
+			// Information about the dataset
+	   		datasets: [{
+				label: "Views",
+				backgroundColor: 'rgba(42,65,232,0.08)',
+				borderColor: '#2a41e8',
+				borderWidth: "3",
+				data: [196,132,215,362,210,252],
+				pointRadius: 5,
+				pointHoverRadius:5,
+				pointHitRadius: 10,
+				pointBackgroundColor: "#fff",
+				pointHoverBackgroundColor: "#fff",
+				pointBorderWidth: "2",
+			}]
+		},
+
+		// Configuration options
+		options: {
+
+		    layout: {
+		      padding: 10,
+		  	},
+
+			legend: { display: false },
+			title:  { display: false },
+
+			scales: {
+				yAxes: [{
+					scaleLabel: {
+						display: false
+					},
+					gridLines: {
+						 borderDash: [6, 10],
+						 color: "#d8d8d8",
+						 lineWidth: 1,
+	            	},
+				}],
+				xAxes: [{
+					scaleLabel: { display: false },
+					gridLines:  { display: false },
+				}],
+			},
+
+		    tooltips: {
+		      backgroundColor: '#333',
+		      titleFontSize: 13,
+		      titleFontColor: '#fff',
+		      bodyFontColor: '#fff',
+		      bodyFontSize: 13,
+		      displayColors: false,
+		      xPadding: 10,
+		      yPadding: 10,
+		      intersect: false
+		    }
+		},
+
+
+});
+
+</script>
+
+
+<!-- Google Autocomplete -->
+<script>
+	function initAutocomplete() {
+		 var options = {
+		  types: ['(cities)'],
+		  // componentRestrictions: {country: "us"}
+		 };
+
+		 var input = document.getElementById('autocomplete-input');
+		 var autocomplete = new google.maps.places.Autocomplete(input, options);
+
+		if ($('.submit-field')[0]) {
+		    setTimeout(function(){
+		        $(".pac-container").prependTo("#autocomplete-container");
+		    }, 300);
+		}
+	}
+</script>
+
+<!-- Google API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initAutocomplete"></script>
+
+
+</body>
+</html>
