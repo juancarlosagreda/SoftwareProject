@@ -14,14 +14,14 @@
 <link rel="stylesheet" href="css/colors/blue.css">
 
 </head>
-<body>
+<body class="gray">
 
 <!-- Wrapper -->
 <div id="wrapper">
 
 <!-- Header Container
 ================================================== -->
-<header id="header-container" class="fullwidth">
+<header id="header-container" class="fullwidth dashboard-header not-sticky">
 
 	<!-- Header -->
 	<div id="header">
@@ -43,110 +43,102 @@
 			<!-- Right Side Content / End -->
 			<div class="right-side">
 
-												<!--  User Notifications -->
-												<div class="header-widget hide-on-mobile">
+				<!--  User Notifications -->
+				<div class="header-widget hide-on-mobile">
 
-													<!-- Notifications -->
-													<div class="header-notifications">
+					<!-- Notifications -->
+					<div class="header-notifications">
 
-														<!-- Trigger -->
-														<div class="header-notifications-trigger">
-															<a href="#"><i class="icon-feather-bell"></i><span>2</span></a>
-														</div>
+						<!-- Trigger -->
+						<div class="header-notifications-trigger">
+							<a href="#"><i class="icon-feather-bell"></i><span>2</span></a>
+						</div>
 
-														<!-- Dropdown -->
-														<div class="header-notifications-dropdown">
+						<!-- Dropdown -->
+						<div class="header-notifications-dropdown">
 
-															<div class="header-notifications-headline">
-																<h4>Notifications</h4>
-																<button class="mark-as-read ripple-effect-dark" title="Mark all as read" data-tippy-placement="left">
-																	<i class="icon-feather-check-square"></i>
-																</button>
-															</div>
+							<div class="header-notifications-headline">
+								<h4>Notifications</h4>
+								<button class="mark-as-read ripple-effect-dark" title="Mark all as read" data-tippy-placement="left">
+									<i class="icon-feather-check-square"></i>
+								</button>
+							</div>
 
-															<div class="header-notifications-content">
-																<div class="header-notifications-scroll" data-simplebar>
-																	<ul>
-																		<!-- Notification -->
-																		<li class="notifications-not-read">
-																			<a href="dashboard-manage-candidates.html">
-																				<span class="notification-icon"><i class="icon-material-outline-group"></i></span>
-																				<span class="notification-text">
-																					<strong>Michael Shannah</strong> accepted your job offer <span class="color"> Check your messages!</span>
-																				</span>
-																			</a>
-																		</li>
+							<div class="header-notifications-content">
+								<div class="header-notifications-scroll" data-simplebar>
+									<ul>
+										<!-- Notification -->
+										<li class="notifications-not-read">
+											<a href="dashboard-manage-jobs.html">
+												<span class="notification-icon"><i class="icon-material-outline-group"></i></span>
+												<span class="notification-text">
+													<strong>Carlos Azua</strong> offered you a job <span class="color"></span>
+												</span>
+											</a>
+										</li>
 
-																		<!-- Notification -->
-																		<li>
-																			<a href="dashboard-manage-bidders.html">
-																				<span class="notification-icon"><i class=" icon-material-outline-gavel"></i></span>
-																				<span class="notification-text">
-																					<strong>Gilbert Allanis</strong> accepted your job offer <span class="color">Check your messages!</span>
-																				</span>
-																			</a>
-																		</li>
-																	</ul>
-																</div>
-															</div>
+										<!-- Notification -->
+										<li>
+											<a href="dashboard-manage-jobs.html">
+												<span class="notification-icon"><i class=" icon-material-outline-group"></i></span>
+												<span class="notification-text">
+													<strong>Andrea Perez</strong> offered you a job <span class="color"></span>
+												</span>
+											</a>
+										</li>
 
-														</div>
 
-													</div>
 
-													<!-- Messages -->
-													<div class="header-notifications">
-														<div class="header-notifications-trigger">
-															<a href="#"><i class="icon-feather-mail"></i><span>2</span></a>
-														</div>
+									</ul>
+								</div>
+							</div>
 
-														<!-- Dropdown -->
-														<div class="header-notifications-dropdown">
+						</div>
 
-															<div class="header-notifications-headline">
-																<h4>Messages</h4>
-																<button class="mark-as-read ripple-effect-dark" title="Mark all as read" data-tippy-placement="left">
-																	<i class="icon-feather-check-square"></i>
-																</button>
-															</div>
+					</div>
 
-															<div class="header-notifications-content">
-																<div class="header-notifications-scroll" data-simplebar>
-																	<ul>
-																		<!-- Notification -->
-																		<li class="notifications-not-read">
-																			<a href="dashboard-messages.html">
-																				<span class="notification-avatar status-online"><img src="images/user-avatar-small-03.jpg" alt=""></span>
-																				<div class="notification-text">
-																					<strong>Michael Shannah</strong>
-																					<p class="notification-msg-text">Thanks for reaching out Tom. Please let me know what times my services are required</p>
-																					<span class="color">4 hours ago</span>
-																				</div>
-																			</a>
-																		</li>
+					<!-- Messages -->
+					<div class="header-notifications">
+						<div class="header-notifications-trigger">
+							<a href="#"><i class="icon-feather-mail"></i><span>1</span></a>
+						</div>
 
-																		<!-- Notification -->
-																		<li class="notifications-not-read">
-																			<a href="dashboard-messages.html">
-																				<span class="notification-avatar status-offline"><img src="images/user-avatar-small-02.jpg" alt=""></span>
-																				<div class="notification-text">
-																					<strong>Sindy Forest</strong>
-																					<p class="notification-msg-text"> Hello Tom! I am glad you contacted me! Please let me know what you need!</p>
-																					<span class="color">Yesterday</span>
-																				</div>
-																			</a>
-																		</li>
+						<!-- Dropdown -->
+						<div class="header-notifications-dropdown">
 
-																	</ul>
-																</div>
-															</div>
+							<div class="header-notifications-headline">
+								<h4>Messages</h4>
+								<button class="mark-as-read ripple-effect-dark" title="Mark all as read" data-tippy-placement="left">
+									<i class="icon-feather-check-square"></i>
+								</button>
+							</div>
 
-															<a href="dashboard-messages.html" class="header-notifications-button ripple-effect button-sliding-icon">View All Messages<i class="icon-material-outline-arrow-right-alt"></i></a>
-														</div>
-													</div>
-
+							<div class="header-notifications-content">
+								<div class="header-notifications-scroll" data-simplebar>
+									<ul>
+										<!-- Notification -->
+										<li class="notifications-not-read">
+											<a href="dashboard-messages-caretaker.html">
+												<span class="notification-avatar status-online"><img src="images/user-avatar-small-03.jpg" alt=""></span>
+												<div class="notification-text">
+													<strong>David Peterson</strong>
+													<p class="notification-msg-text">Thanks for reaching out. We ...</p>
+													<span class="color">4 hours ago</span>
 												</div>
-												<!--  User Notifications / End -->
+											</a>
+										</li>
+
+
+									</ul>
+								</div>
+							</div>
+
+							<a href="dashboard-messages-caretaker.html" class="header-notifications-button ripple-effect button-sliding-icon">View All Messages<i class="icon-material-outline-arrow-right-alt"></i></a>
+						</div>
+					</div>
+
+				</div>
+				<!--  User Notifications / End -->
 
 				<!-- User Menu -->
 				<div class="header-widget">
@@ -167,33 +159,31 @@
 								<div class="user-details">
 									<div class="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt=""></div>
 									<div class="user-name">
-										Tom Smith <span>Freelancer</span>
+										Pedro Icaza <span>Caretaker</span>
 									</div>
 								</div>
 
 								<!-- User Status Switcher -->
 								<div class="status-switch" id="snackbar-user-status">
-									<label class="user-online current-status">Online</label>
-									<label class="user-invisible">Invisible</label>
+									<label class="user-online current-status">Available</label>
+									<label class="user-invisible">Unavailable</label>
 									<!-- Status Indicator -->
 									<span class="status-indicator" aria-hidden="true"></span>
 								</div>
 						</div>
 
-
-												<ul class="user-menu-small-nav">
-													<li><a href="dashboard.html"><i class="icon-material-outline-dashboard"></i> View my Profile </a></li>
-													<li><a href="REVIEWS_CLIENTS.html"><i class="icon-material-outline-dashboard"></i> Reviews</a></li>
-														<li><a href="MESSAGES_CLIENTS.html"><i class="icon-material-outline-dashboard"></i> Messages</a></li>
-													<li><a href="SETTINGS_CLIENTS.html"><i class="icon-material-outline-settings"></i> Settings</a></li>
-													<li><a href="INICIO.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
-												</ul>
+						<ul class="user-menu-small-nav">
+							<li><a href="dashboard.html"><i class="icon-material-outline-dashboard"></i> Dashboard</a></li>
+							<li><a href="dashboard-settings-caretaker.html"><i class="icon-material-outline-settings"></i> Settings</a></li>
+							<li><a href="index.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+						</ul>
 
 						</div>
 					</div>
 
 				</div>
 				<!-- User Menu / End -->
+
 
 				<!-- Mobile Navigation Button -->
 				<span class="mmenu-trigger">
@@ -272,7 +262,7 @@
 									<div class="detail-item"><i class="icon-material-outline-date-range"></i> Jan 2020</div>
 								</div>
 								<div class="item-description">
-									<p> Very profesional... my father was always happy and entertained. </p>
+									<p> She is such a nice lady, always happy and entertained. </p>
 								</div>
 							</div>
 						</div>
@@ -299,7 +289,7 @@
 									<div class="detail-item"><i class="icon-material-outline-date-range"></i> May 2019</div>
 								</div>
 								<div class="item-description">
-									<p>I was extremely impressed with his persistance. My mom can be hard to deal with but Luis knew the right tricks! </p>
+									<p>I was extremely impressed with her. She is so strong and has so many stories to share! </p>
 								</div>
 							</div>
 						</div>
