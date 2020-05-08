@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app>
+
+    <servlet>
+        <servlet-name>CaregiverRegister</servlet-name>
+        <servlet-class>CaregiverRegister</servlet-class>
+    </servlet>
+	
+    <servlet>
+        <servlet-name>LogoutMoni</servlet-name>
+        <servlet-class>LogoutMoni</servlet-class>
+    </servlet>
+	
+    <servlet>
+        <servlet-name>caregiverReviews</servlet-name>
+        <servlet-class>caregiverReviews</servlet-class>
+    </servlet>
+	
+	<servlet>
+		<servlet-name>CaregiverUtilsMoni</servlet-name>
+        <servlet-class>CaregiverUtilsMoni</servlet-class>
+    </servlet>	
+		
+	<servlet>
+		<servlet-name>CheckLoginMoni</servlet-name>
+        <servlet-class>CheckLoginMoni</servlet-class>
+    </servlet>	
+	
+	<servlet>
+		<servlet-name>newReview</servlet-name>
+        <servlet-class>newReview</servlet-class>
+    </servlet>	
+	
+	<servlet>
+		<servlet-name>caregiverJobs</servlet-name>
+        <servlet-class>caregiverJobs</servlet-class>
+    </servlet>	
+	
+	<servlet>
+		<servlet-name>viewClientProfile</servlet-name>
+        <servlet-class>viewClientProfile</servlet-class>
+    </servlet>	
+	
+	<servlet>
+		<servlet-name>caregiverWarnings</servlet-name>
+        <servlet-class>caregiverWarnings</servlet-class>
+    </servlet>	
+	
+	<servlet>
+		<servlet-name>caregiverUpdate</servlet-name>
+        <servlet-class>caregiverUpdate</servlet-class>
+    </servlet>	
+	
+	<servlet>
+		<servlet-name>caregiverSettings</servlet-name>
+        <servlet-class>caregiverSettings</servlet-class>
+    </servlet>	
+	
+	<servlet>
+		<servlet-name>seen</servlet-name>
+        <servlet-class>seen</servlet-class>
+    </servlet>	
+	
+
+    <servlet>
+		<servlet-name>status</servlet-name>
+        <servlet-class>status</servlet-class>
+    </servlet>	
+	
+	
+	
+	
+    <servlet-mapping>
+        <servlet-name>CaregiverRegister</servlet-name>
+        <url-pattern>/CaregiverRegister</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>LogoutMoni</servlet-name>
+        <url-pattern>/LogoutMoni</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>caregiverReviews</servlet-name>
+        <url-pattern>/caregiverReviews</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>CaregiverUtilsMoni</servlet-name>
+        <url-pattern>/CaregiverUtilsMoni</url-pattern>
+    </servlet-mapping>
+		
+	<servlet-mapping>
+        <servlet-name>CheckLoginMoni</servlet-name>
+        <url-pattern>/CheckLoginMoni</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>newReview</servlet-name>
+        <url-pattern>/newReview</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>caregiverJobs</servlet-name>
+        <url-pattern>/caregiverJobs</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>viewClientProfile</servlet-name>
+        <url-pattern>/viewClientProfile</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>caregiverWarnings</servlet-name>
+        <url-pattern>/caregiverWarnings</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>caregiverUpdate</servlet-name>
+        <url-pattern>/caregiverUpdate</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>caregiverSettings</servlet-name>
+        <url-pattern>/caregiverSettings</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>seen</servlet-name>
+        <url-pattern>/seen</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>status</servlet-name>
+        <url-pattern>/status</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>
