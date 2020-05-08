@@ -64,6 +64,96 @@
         <servlet-name>sendReply</servlet-name>
         <servlet-class>sendReply</servlet-class>
     </servlet>
+	
+<servlet>
+  	<servlet-name>TeresaClientRegistration</servlet-name>
+  	<display-name>TeresaClientRegistration</display-name>
+  	<servlet-class>TeresaClientRegistration</servlet-class>
+  </servlet>
+	
+	<servlet>
+		<servlet-name>TeresaClientProfile</servlet-name>
+		<display-name>TeresaClientProfile</display-name>
+		<servlet-class>TeresaClientProfile</servlet-class>
+	</servlet>
+	 
+	<servlet>
+		<servlet-name>TeresaJobOffersDetail</servlet-name>
+		<display-name>TeresaJobOffersDetail</display-name>
+		<servlet-class>TeresaJobOffersDetail</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>TeresaTerminateJob</servlet-name>
+		<display-name>TeresaTerminateJob</display-name>
+		<servlet-class>TeresaTerminateJob</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>TeresaFileNotice</servlet-name>
+		<display-name>TeresaFileNotice</display-name>
+		<servlet-class>TeresaFileNotice</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>TeresaNoticeList</servlet-name>
+		<display-name>TeresaNoticeList</display-name>
+		<servlet-class>TeresaNoticeList</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>TeresaLogout</servlet-name>
+		<display-name>TeresaLogout</display-name>
+		<servlet-class>TeresaLogout</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>TeresaSendOffer</servlet-name>
+		<display-name>TeresaSendOffer</display-name>
+		<servlet-class>TeresaSendOffer</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaSendOffer</servlet-name>
+		<url-pattern>/TeresaSendOffer</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaLogout</servlet-name>
+		<url-pattern>/TeresaLogout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaNoticeList</servlet-name>
+		<url-pattern>/TeresaNoticeList</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaFileNotice</servlet-name>
+		<url-pattern>/TeresaFileNotice</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaTerminateJob</servlet-name>
+		<url-pattern>/TeresaTerminateJob</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+  		<servlet-name>TeresaClientRegistration</servlet-name>
+  		<url-pattern>/TeresaClientRegistration</url-pattern>  
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaJobOffersDetail</servlet-name>
+		<url-pattern>/TeresaJobOffersDetail</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet-mapping>
+		<servlet-name>TeresaClientProfile</servlet-name>
+		<url-pattern>/TeresaClientProfile</url-pattern>
+	</servlet-mapping>
+
     
     <servlet-mapping>
         <servlet-name>CaregiverMsg</servlet-name>
@@ -129,4 +219,5 @@
         <servlet-name>sendReply</servlet-name>
         <url-pattern>/sendReply</url-pattern>
     </servlet-mapping>
+	
 </web-app>
