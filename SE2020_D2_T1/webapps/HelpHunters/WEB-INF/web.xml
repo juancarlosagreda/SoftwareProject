@@ -113,6 +113,17 @@
 		<servlet-class>TeresaSendOffer</servlet-class>
 	</servlet>
 	
+	<servlet>
+		<servlet-name>TeresaCheckLogin</servlet-name>
+		<display-name>TeresaCheckLogin</display-name>
+		<servlet-class>TeresaCheckLogin</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaCheckLogin</servlet-name>
+		<url-pattern>/TeresaCheckLogin</url-pattern>
+	</servlet-mapping>
+	
 	<servlet-mapping>
 		<servlet-name>TeresaSendOffer</servlet-name>
 		<url-pattern>/TeresaSendOffer</url-pattern>
