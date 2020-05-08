@@ -185,6 +185,179 @@
    <servlet-name>status</servlet-name>
        <servlet-class>status</servlet-class>
    </servlet>
+	
+	
+   <servlet>
+      <servlet-name>tryUtils</servlet-name>
+      <servlet-class>tryUtils</servlet-class>
+  </servlet>
+
+    <servlet>
+        <servlet-name>adminNotice</servlet-name>
+        <servlet-class>adminNotice</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminLogin</servlet-name>
+        <servlet-class>adminLogin</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminLoginValidation</servlet-name>
+        <servlet-class>adminLoginValidation</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminSettings</servlet-name>
+        <servlet-class>adminSettings</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminClient</servlet-name>
+        <servlet-class>adminClient</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminNoticeInfo</servlet-name>
+        <servlet-class>adminNoticeInfo</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminClientInfo</servlet-name>
+        <servlet-class>adminClientInfo</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminClientAnalytics</servlet-name>
+        <servlet-class>adminClientAnalytics</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminCaregiverAnalytics</servlet-name>
+        <servlet-class>adminCaregiverAnalytics</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminAjax</servlet-name>
+        <servlet-class>adminAjax</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminDeleteClient</servlet-name>
+        <servlet-class>adminDeleteClient</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminClientNotices</servlet-name>
+        <servlet-class>adminClientNotices</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminSettingsAjax</servlet-name>
+        <servlet-class>adminSettingsAjax</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminNoticeListAjax</servlet-name>
+        <servlet-class>adminNoticeListAjax</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminMakeIncidenceAjax</servlet-name>
+        <servlet-class>adminMakeIncidenceAjax</servlet-class>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>adminCaregiver</servlet-name>
+        <servlet-class>adminCaregiver</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminIncident</servlet-name>
+        <servlet-class>adminIncident</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>adminRequest</servlet-name>
+        <servlet-class>adminRequest</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminIncidenceInfo</servlet-name>
+        <servlet-class>adminIncidenceInfo</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminIncperCaregiver</servlet-name>
+        <servlet-class>adminIncperCaregiver</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminNoIncperCaregiver</servlet-name>
+        <servlet-class>adminNoIncperCaregiver</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminJobAnalyticsData</servlet-name>
+        <servlet-class>adminJobAnalyticsData</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminIncidenceAnalyticsData</servlet-name>
+        <servlet-class>adminIncidenceAnalyticsData</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminJobAnalytics</servlet-name>
+        <servlet-class>adminJobAnalytics</servlet-class>
+    </servlet>
+
+
+
+    <servlet>
+        <servlet-name>adminIncidenceAnalytics</servlet-name>
+        <servlet-class>adminIncidenceAnalytics</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>getEmploymentID</servlet-name>
+        <servlet-class>getEmploymentID</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminWarningData</servlet-name>
+        <servlet-class>adminWarningData</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>sendWarning</servlet-name>
+        <servlet-class>sendWarning</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminWarning</servlet-name>
+        <servlet-class>adminWarning</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>request</servlet-name>
+        <servlet-class>request</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>adminCaregiverInfo</servlet-name>
+        <servlet-class>adminCaregiverInfo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>getCaregiverExtraInfo2</servlet-name>
+        <servlet-class>getCaregiverExtraInfo2</servlet-class>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>CaregiverProvince</servlet-name>
+        <servlet-class>CaregiverProvince</servlet-class>
+    </servlet>
 
 
 
@@ -473,5 +646,174 @@
         <servlet-name>status</servlet-name>
         <url-pattern>/status</url-pattern>
     </servlet-mapping>
+	
+    <servlet-mapping>
+        <servlet-name>tryUtils</servlet-name>
+        <url-pattern>/tryUtils</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminNotice</servlet-name>
+        <url-pattern>/adminNotice</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminLogin</servlet-name>
+        <url-pattern>/adminLogin</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminLoginValidation</servlet-name>
+        <url-pattern>/adminLoginValidation</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminSettings</servlet-name>
+        <url-pattern>/adminSettings</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminClient</servlet-name>
+        <url-pattern>/adminClient</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminNoticeInfo</servlet-name>
+        <url-pattern>/adminNoticeInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminClientInfo</servlet-name>
+        <url-pattern>/adminClientInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminClientAnalytics</servlet-name>
+        <url-pattern>/adminClientAnalytics</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminCaregiverAnalytics</servlet-name>
+        <url-pattern>/adminCaregiverAnalytics</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminAjax</servlet-name>
+        <url-pattern>/adminAjax</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminDeleteClient</servlet-name>
+        <url-pattern>/adminDeleteClient</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminClientNotices</servlet-name>
+        <url-pattern>/adminClientNotices</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminSettingsAjax</servlet-name>
+        <url-pattern>/adminSettingsAjax</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminNoticeListAjax</servlet-name>
+        <url-pattern>/adminNoticeListAjax</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminMakeIncidenceAjax</servlet-name>
+        <url-pattern>/adminMakeIncidenceAjax</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminCaregiver</servlet-name>
+        <url-pattern>/adminCaregiver</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminIncident</servlet-name>
+        <url-pattern>/adminIncident</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adminRequest</servlet-name>
+        <url-pattern>/adminRequest</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminIncidenceInfo</servlet-name>
+        <url-pattern>/adminIncidenceInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminIncperCaregiver</servlet-name>
+        <url-pattern>/adminIncperCaregiver</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminNoIncperCaregiver</servlet-name>
+        <url-pattern>/adminNoIncperCaregiver</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminJobAnalyticsData</servlet-name>
+        <url-pattern>/adminJobAnalyticsData</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminIncidenceAnalyticsData</servlet-name>
+        <url-pattern>/adminIncidenceAnalyticsData</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminJobAnalytics</servlet-name>
+        <url-pattern>/adminJobAnalytics</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminIncidenceAnalytics</servlet-name>
+        <url-pattern>/adminIncidenceAnalytics</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>getEmploymentID</servlet-name>
+        <url-pattern>/getEmploymentID</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminWarningData</servlet-name>
+        <url-pattern>/adminWarningData</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>sendWarning</servlet-name>
+        <url-pattern>/sendWarning</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminWarning</servlet-name>
+        <url-pattern>/adminWarning</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>request</servlet-name>
+        <url-pattern>/request</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adminCaregiverInfo</servlet-name>
+        <url-pattern>/adminCaregiverInfo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getCaregiverExtraInfo2</servlet-name>
+        <url-pattern>/getCaregiverExtraInfo2</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>CaregiverProvince</servlet-name>
+        <url-pattern>/CaregiverProvince</url-pattern>
+    </servlet-mapping>	
 
 </web-app>
