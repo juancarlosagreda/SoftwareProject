@@ -32,7 +32,7 @@ public class CheckLoginMoni extends HttpServlet {
 			session.setAttribute("password", password);
             res.sendRedirect("caregiverReviews");
         } else {
-            res.sendRedirect("INICIO.html");
+            res.sendRedirect("INICIOMoni.html");
             }
            
         }
