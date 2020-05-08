@@ -9,7 +9,7 @@ function noticeList () {
     // Completar obtenciçón de valores
     console.log("Aqui se inicia la petición al servlet...");
 
-    fetch('/NoticeList', {
+    fetch('/TeresaNoticeList', {
         method: 'get',
     }).then(function(response){
         response.json().then( (data)=> {
@@ -64,7 +64,7 @@ function readNotice (noticeID, i) {
     var misDatos = {"noticeID": noticeID};
 
 
-    postDataToServlet("/NoticeList", misDatos);
+    postDataToServlet("/TeresaNoticeList", misDatos);
 
 
     console.log("Notice has been change to read");

@@ -4,7 +4,7 @@ function profileDisplay(){
     console.log("Aqui se inicia la petición al servlet...");
     // Async Functions
 
-    fetch('/ClientProfile', {
+    fetch('/TeresaClientProfile', {
         method: 'get',
     }).then(function(response){
         response.json().then( (data)=>{

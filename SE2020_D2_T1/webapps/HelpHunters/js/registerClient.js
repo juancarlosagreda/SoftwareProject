@@ -23,7 +23,7 @@ function registerUser(){
     console.log("Aqui se inicia la petición al servlet...");
     // Async Functions
 
-    fetch('/ClientRegistration', {
+    fetch('/TeresaClientRegistration', {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },

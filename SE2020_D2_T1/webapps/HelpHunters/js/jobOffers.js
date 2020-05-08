@@ -6,7 +6,7 @@ function jobOffers(){
     console.log("Aqui se inicia la petición al servlet...");
     // Async Functions
 
-    fetch('/JobOffersDetail', {
+    fetch('/TeresaJobOffersDetail', {
         method: 'get',
     }).then(function(response){
         response.json().then( (data)=>{
@@ -293,7 +293,7 @@ function sendNotice(i){
             .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
     }
 
-    fetch('/FileNotice', {
+    fetch('/TeresaFileNotice', {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
@@ -325,7 +325,7 @@ function terminateJob(employmentID) {
             .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
     }
 
-    fetch('/TerminateJob', {
+    fetch('/TeresaTerminateJob', {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },

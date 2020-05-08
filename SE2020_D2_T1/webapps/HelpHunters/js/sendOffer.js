@@ -35,7 +35,7 @@ function sendOffer () {
             .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
     }
 
-    fetch('/SendOffer', {
+    fetch('/TeresaSendOffer', {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },

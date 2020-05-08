@@ -1,7 +1,7 @@
 var userData = null;
 
 async function getUserClientDataServlet(){
-    let response = await fetch('/ClientProfile', {method: 'get'})
+    let response = await fetch('/TeresaClientProfile', {method: 'get'})
     let userData = response.json();
     return userData;
 }
@@ -55,7 +55,7 @@ async function saveUserData(){
 
     }
     
-    response = await postDataToServlet("/ClientProfile", userInfo);
+    response = await postDataToServlet("/TeresaClientProfile", userInfo);
     console.log("La respuesta es ", response);
     alert(response.description);
     if (changepassword == true) {
