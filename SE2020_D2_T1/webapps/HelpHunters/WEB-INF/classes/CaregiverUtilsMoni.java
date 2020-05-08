@@ -19,7 +19,7 @@ public class CaregiverUtilsMoni {
 		str.append("<div class='container'>");
 		str.append("<div class='left-side'>");
 		str.append("<div id='logo'>");
-		str.append("<a href='indexMoni.html'><img src='images/logo.png' alt=''></a>");
+		str.append("<a href='index.html'><img src='images/logo.png' alt=''></a>");
 		str.append("</div>");
 		str.append("</div>");
 		str.append("<div class='right-side'>");
