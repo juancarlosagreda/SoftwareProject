@@ -1,58 +1,1173 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Help Hunters</title>
-  </head>
-  <body>
-    <h1>Help Hunters</h1>
-    <h2>Check out our website:</h2>
-    <a href="INICIO.html">Home page</a>
-    <h2>Or</h2>
-    <h2>Look up by functionalities:</h2>
-    <ol>
-      <h3><li>María Paula Accini</li></h3>
-      <table border="1">
-        <tr><th>Functionality</th><th>Description</th><th>Link</th></tr>
-        <tr>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-      <h3><li>Juan Carlos Agreda</li></h3>
-      <table border="1">
-        <tr><th>Functionality</th><th>Description</th><th>Link</th></tr>
-        <tr>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-      <h3><li>Alejandra Ariza</li></h3>
-      <table border="1">
-        <tr><th>Functionality</th><th>Description</th><th>Link</th></tr>
-        <tr>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-      <h3><li>Corina Garrido</li></h3>
-      <table border="1">
-        <tr><th>Functionality</th><th>Description</th><th>Link</th></tr>
-        <tr>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-      <h3><li>Teresa Ibarra</li></h3>
-      <table border="1">
-        <tr><th>Functionality</th><th>Description</th><th>Link</th></tr>
-        <tr>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-      <h3><li>Monica Tamayo</li></h3>
-      <table border="1">
-        <tr><th>Functionality</th><th>Description</th><th>Link</th></tr>
-        <tr>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-    </ol>
-  </body>
+<html>
+
+<head></head>
+
+<body>
+  <p></p>
+  <table border="1" style="width: 818px;">
+    <tbody>
+      <tr>
+        <td style="width: 806px;" colspan="3">Agreda Juan Carlos</td>
+      </tr>
+      <tr>
+        <td style="width: 806px;" colspan="3">This work is made in a Mac PC so if you want to run it in a Windows PC the changes have to be made in the ConnectionUtils.java</td>
+      </tr>
+      <tr>
+        <td style="width: 806px;" colspan="3">Administrator Login: <a href="adminLogin">Click to log in</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description:<br>
+          This function shows a form where the user needs to input its username (email) and password to enter the administrator interface.
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use:<br>In the form use the following data:<br>username: sjerke2@dyndns.org<br>password: OeStYoIKR<br>and and if the credentials are correct
+        then your session will begin and will be directed to the template I created (for the lack of a dashboard). Now if you input the credentials incorrectly, then a red message will
+      appear below your password input, saying that the credentials are incorrect.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminLoginValidation.java</td>
+        <td style="width: 499px;">Checks if the credentials are valid by calling adminLoginData.java, and if there are credentials found, then a HttpSession request starts with the
+        user's credentials and redirects to tryUtils.java. If these credentials are invalid, then it calls adminLoginPrintPage.java to print the whole login page again, but with the red error message.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminLoginData.java</td>
+        <td style="width: 499px;">This class has the constructors and the methods suited for the requests that adminLoginValidation.java does.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminLoginPrintPage.java</td>
+        <td style="width: 499px;">This page saves a lot of code, because it prints the login page when adminLogin.java calls it, and it prints the login page with the error when adminLoginValidation.java
+        calls it.</td>
+      </tr>
+
+      <tr>
+        <td style="width: 806px;" colspan="3">Show Active Clients: <a href="adminClient">Click to see the clients</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description:<br>
+          This function shows all of the active clients with their respective emails. A click to the client's name will take you to the client's profile.
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use:<br>As an administrator, it is really important to keep trash of all of our clients and a way to contact them.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminUtils.java</td>
+        <td style="width: 499px;">It saves all of the code in the world because it establishes a template, and with anchors all around the template, attaching javascript to
+        the page made it more dynamic and easier to code on. Also, it maintains the session intact (you can check by clicking the right hand corner and seeing that your profile
+        matches your credentials). Also, like ConnectionUtils.java, I wont mention it every time, it is only so that you have a grasp of what the class does every time.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminClientData.java</td>
+        <td style="width: 499px;">Establishes a connection with our database and performs the queries that we need that better suit our data structures, and returns the values that we
+        query for.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCreateClientList.js</td>
+        <td style="width: 499px;">This javascriptfile grabs the template by the anchors and starts filling up the page with the JSON object that this servlet returns.</td>
+      </tr>
+
+
+      <tr>
+        <td style="width: 806px;" colspan="3">Client Filter by Gender: <a href="adminClient">Click to see the filter</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description:<br>
+          It is a combo box that has an onchange function implemented with AJAX, so that every time it changes, a JSON object is returned, and our javascript handles the requests every time.
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use:<br>It is really important for the administrators  of this webpage to monitor and be able to query for each gender, just because of the nature of
+        the company.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminClientData.java</td>
+        <td style="width: 499px;">Establishes a connection with our database and performs the queries that we need that better suit our data structures, and returns the values that we
+        query for.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">firstAjax.js</td>
+        <td style="width: 499px;">This javascript file handles the changes of the combo box, makes the XMLHttpRequests, and handles the response.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCreateClientList.js</td>
+        <td style="width: 499px;">This javascriptfile grabs the template by the anchors and starts filling up the page with the JSON object that this servlet returns.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminAjax.java</td>
+        <td style="width: 499px;">This servlets calls the methods in adminClientData.java for a query that suits the combo box's value and returns a JSON object ONLY.</td>
+      </tr>
+
+      <tr>
+        <td style="width: 806px;" colspan="3">Client Profile: <a href="adminClientInfo?clientID=2">Click to see client 2</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description: <br>This servlet shows the profile you just clicked.<br>
+
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use: The main use of this servlet is to make actions related to the client, being queries or deleting the client.<br></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminClientInfo.java</td>
+        <td style="width: 499px;">This servlet calls the methods in adminClientData.java in order to make more specific queries about one client, and returns a JSON object along with the page itself
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCreateClient.js</td>
+        <td style="width: 499px;">This js file grabs the anchors of the HTML to produce all of the features that it contains
+        </td>
+      </tr>
+
+      <tr>
+        <td style="width: 806px;" colspan="3">Delete Client Profile: <a href="adminClientInfo?clientID=2">Click to see client 2</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description: <br> Press the trashcan button and the client will be deleted.
+
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use:<br>Mainly to de-clutter the actual working set of data (meaning that if a client dies or doesnt use
+          the service anymore, it can be deleted)</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminClientInfo.java</td>
+        <td style="width: 499px;">This servlet calls the methods in adminClientData.java in order to make more specific queries about one client, and returns a JSON object along with the page itself
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCreateClient.js</td>
+        <td style="width: 499px;">This js file grabs the anchors of the HTML to produce all of the features that it contains
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminDeleteClient.java</td>
+        <td style="width: 499px;">This servlet returns a JSON object with the amount of lines *UPDATED*, since we dont actually delete the client, we just
+        turn its inactive parameter to 0.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminClientInfo.js</td>
+        <td style="width: 499px;">This js makes the XMLHttpRequest and handles all of the information transactions to fullfil the page's needs.</td>
+      </tr>
+
+      <tr>
+        <td style="width: 806px;" colspan="3">Show Notices From Client: <a href="adminClientInfo?clientID=2">Click to see client 2</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description:<br> If you click the button, a list of all the notices from that client will appear.
+
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use:<br>Basically fulfills our needs to query ALL of the notices from one client instead of searching one by one.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminClientInfo.java</td>
+        <td style="width: 499px;">This servlet calls the methods in adminClientData.java in order to make more specific queries about one client, and returns a JSON object along with the page itself
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCreateClient.js</td>
+        <td style="width: 499px;">This js file grabs the anchors of the HTML to produce all of the features that it contains
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminClientNotices.java</td>
+        <td style="width: 499px;">This servlet returns a JSON object with all of the notices from the respective client.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminClientInfo.js</td>
+        <td style="width: 499px;">This js makes the XMLHttpRequest and handles all of the information transactions to fullfil the page's needs. Also, it makes it possible to navigate to each
+        individual notice.</td>
+      </tr>
+
+      <tr>
+        <td style="width: 806px;" colspan="3">Show Notices : <a href="adminNotice">Click to see notices</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description:<br>Shows every notice that a client has sent to an administrator.
+
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use:<br>It is our medium of comunication with the client.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCreateNoticeList.js</td>
+        <td style="width: 499px;">This js grabs the template by its anchors and the JSON object within the page so that it displays the full list of notices.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminNotice.java</td>
+        <td style="width: 499px;">This servlet calls adminNoticeData.java to get the JSON object with all of the notice informations, and returns it within the web page.</td>
+      </tr>
+
+      <tr>
+        <td style="width: 806px;" colspan="3">Search For Notices : <a href="adminNotice">Click to see notices</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description:<br>You can search for keywords by inputing them in the search bar.
+
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use:<br>It is a shortcut to filter bad notices so that the administrators can prioritize.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCreateNoticeList.js</td>
+        <td style="width: 499px;">This js grabs the template by its anchors and the JSON object within the page so that it displays the full list of notices.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminNotice.java</td>
+        <td style="width: 499px;">This servlet calls adminNoticeData.java to get the JSON object with all of the notice informations, and returns it within the web page.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminNoticeListAjax.js</td>
+        <td style="width: 499px;">This js file can handle all of the requests given, including the event listeners for the buttons and the AJAX requests.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminNoticeListAjax.java</td>
+        <td style="width: 499px;">This servlet calls adminNoticeData.java to return the JSON object with the search results (by keyword on the title of the notice)</td>
+      </tr>
+
+      <tr>
+        <td style="width: 806px;" colspan="3">View Notice Information: <a href="adminNoticeInfo?noticeID=5">Click to see notice 5</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description:<br>We will be able to see from this page the notice we just clicked.
+
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use:<br>Mainly for the operations programmed, and explained furthermore.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCreateNoticeInfo.java</td>
+        <td style="width: 499px;">This js file handles the JSON object that came from the servlet, and also handles the visibility of the buttons. For
+        example, a Notice with a reply will show the reply, but not the reply button.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminNoticeInfo.java</td>
+        <td style="width: 499px;">This servlet calls adminNoticeData.java to perform the queries needed to fulfill the needs of this page and return a
+          JSON object for our js to handle it.</td>
+      </tr>
+
+      <tr>
+        <td style="width: 806px;" colspan="3">Mark Notice As An Incidence: <a href="adminNoticeInfo?noticeID=5">Click to see notice 5</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description:<br>When you click the button, the notice goes to the Incidence tab of our dashboard, where
+          other operations can be done.
+
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use:<br>Mainly to sort out all of the notices that we can get to have, and to give special treatment to
+        the notices that need it.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCreateNoticeInfo.java</td>
+        <td style="width: 499px;">This js file handles the JSON object that came from the servlet, and also handles the visibility of the buttons. For
+        example, a Notice with a reply will show the reply, but not the reply button.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminNoticeInfo.java</td>
+        <td style="width: 499px;">This servlet calls adminNoticeData.java to perform the queries needed to fulfill the needs of this page and return a
+          JSON object for our js to handle it.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminMakeIncidenceAjax.java</td>
+        <td style="width: 499px;">This servlet makes the update query to send the notice to the incidence dashboard.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminNoticeInfoAjax.js</td>
+        <td style="width: 499px;">This js handles the XMLHttpRequest for the servlet and notices the user it has been done.</td>
+      </tr>
+
+      <tr>
+        <td style="width: 806px;" colspan="3">Reply To A Notice: <a href="adminNoticeInfo?noticeID=11">Click to see notice 11</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description:<br>Press the reply button if available, and a text box will appear so you can reply and send to the client.
+
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use:<br>Feedback for the client.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCreateNoticeInfo.java</td>
+        <td style="width: 499px;">This js file handles the JSON object that came from the servlet, and also handles the visibility of the buttons. For
+        example, a Notice with a reply will show the reply, but not the reply button.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminNoticeInfo.java</td>
+        <td style="width: 499px;">This servlet calls adminNoticeData.java to perform the queries needed to fulfill the needs of this page and return a
+          JSON object for our js to handle it.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminMakeIncidenceAjax.java</td>
+        <td style="width: 499px;">This servlet makes the update query to fill in the reply slot in the Notice table.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminNoticeInfoAjax.js</td>
+        <td style="width: 499px;">This js handles the XMLHttpRequest for the servlet and notices the user it has been done. Also puts event listeners to all the buttons and adds the reply division,
+        and shows the reply just in the moment you hit send.</td>
+      </tr>
+
+      <tr>
+        <td style="width: 806px;" colspan="3">Show Client Analytics: <a href="adminClientAnalytics">Click to see client analytics</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description:<br>This part of our dashboard shows two graphs, used mainly for analytic purposes.
+
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use:<br>To be able to track multiple aspects of the company.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCreateClientAnalytics.js</td>
+        <td style="width: 499px;">This js grabs the template by the anchor and puts the divisors for the charts.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminClientAnalytics.java</td>
+        <td style="width: 499px;">We query the chart information and set it up for the google API.</td>
+      </tr>
+
+      <tr>
+        <td style="width: 806px;" colspan="3">Show Caregiver Analytics: <a href="adminCaregiverAnalytics">Click to see caregiver analytics</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description:<br>This part of our dashboard shows two graphs, used mainly for analytic purposes.
+
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use:<br>To be able to track multiple aspects of the company.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCreateCaregiverAnalytics.js</td>
+        <td style="width: 499px;">This js grabs the template by the anchor and puts the divisors for the charts.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCaregiverAnalytics.java</td>
+        <td style="width: 499px;">We query the chart information and set it up for the google API.</td>
+      </tr>
+
+      <tr>
+        <td style="width: 806px;" colspan="3">Change Administrator Settings: <a href="adminSettings">Click to make changes</a></td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Description:<br>An interface that lets the user change credentials if the password is introduced correctly.
+
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 719px;" colspan="2">Use:<br>To change the user's credentials: name, surname, email or password.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminSettings.java</td>
+        <td style="width: 499px;">This servlet mainly prints the template and puts in a JSON object all of the session information.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminCreateSettings.js</td>
+        <td style="width: 499px;">This js grabs the template by the anchors and puts the template up along with all of the dashboard content and placeholders.</td>
+      </tr>
+      <tr>
+        <td style="width: 87px;"></td>
+        <td style="width: 220px;">adminSettingsAjax.js</td>
+        <td style="width: 499px;">This js files has many purposes, but mainly event listeners and handlers for every possible outcome from this user experience.</td>
+      </tr>
+      </tr>
+    </tbody>
+  </table>
+  <p></p>
+
+  <table border="1" style="width: 818px;">
+  <tbody>
+  <tr>
+  <td style="width: 806px;" colspan="3">Author: Maria Paula Accini</td>
+  </tr>
+  <tr style="width: 806px;" colspan="3">READ BEFORE: These are the functionalities I am in charge of. I have listed the links of each one of them but it is importat to note that some of them will not work if accesed independently because they might require prior parameters from other servlets. It is also important that the login needs to be done first in order to get and mantain the session.</tr>
+  <tr>
+  <td style="width: 806px;" colspan="3">This work is made in a Mac PC so if you want to run it in a Windows PC the changes have to be made in the ConnectionUtils.java </td>
+  </tr>
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="adminLogin">Click to Log IN</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> This function is not made by me, but it is necessary to log in first in order to access to the servlets <br>To access to the webpage you will have to insert a username and a password from the administator table and if they match you can log in</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Use:<br>You can try with the following ones <br>username 1: aibbison1@disqus.com   password 1: ztFVTPqNPfLA <br>username 2: sjerke2@dyndns.org    password 2: OeStYoIKR <br> username 3: bbockmaster7@yale.edu  password 3: tqcUIcsh </td>
+  </tr>
+
+
+
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="adminRequest"> View Requests</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> This function displays all the requests of caregivers that want to work for HelpHunters <br>This is the dashboard where the administrators can see the list of requests. Where are the possible caregivers from, their mail, how much they charge for hour and there are 2 buttons in each person to accept or decline this requests.</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Use:<br>As an admin I can see here the requests I have and by clicking on the accept or decline buttons I either add them to the caregivers list or delete them from the requests list.<br></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminRequest.java</td>
+  <td style="width: 499px;">Uses the "getadminRequestData" function from the "adminRequestData.java" to make a list of the requests. <br>This function gets the caregivers information from the caregivers table that has an enrollment status of 0 <br> Uses JavaScript to print the information. </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminCreateRequestList.js</td>
+  <td style="width: 499px;">Displays the data of the requests in an ordered list with the info of each caregiver and the buttons to accept or decline the requests.<br> The buttons call the request servlet to excecute the accept or decline action. </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">request.java</td>
+  <td style="width: 499px;">With the information received from the buttons this servlet either accepts the request, changes the enrollmentstatus to 1 and redirects the page to the caregivers list where the caregiver is added<br> Or this decline button changes the enrollmentstatus of the caregiver to a 2 and redirects the web to the same page so it can be updated without that request. </td>
+  </tr>
+
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="adminCaregiver">Manage Caregivers</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> This function displays all the caregivers that work for HelpHunters <br>The administrators can see the list of caregivers, if they are currently in a job with a red box with an "Unavailable" text on it or if the are not involved in any job yet with a green box with an "Available" text on it. </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Use:<br>As an admin I can see all the caregivers of the company, little details of them and how many incidences each caregiver has. <br> The admin can access to more info of the caregivers by clicking on their name and also access to the incidences by clicking in the number button.<br></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminCaregiver.java</td>
+  <td style="width: 499px;">Uses the "getadminCaregiverData" function from the adminCaregiverData.java to make a list of the caregivers. <br>This function gets the caregivers information from the caregivers table that has an enrollment status of 1 <br> Uses JavaScript to print the information. </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">admiCreateCaregiverList.js</td>
+  <td style="width: 499px;">Displays the data of the caregivers in an ordered list with the info of each caregiver and the button to see if they have any incidence.<br> The names are a link that calls the "adminCaregiverInfo" servlet to display more information of the caregivers. <br> The number buttons call the "adminIncperCaregiver" servlet to view the list of incidences of this caregiver </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminCaregiverInfo.java</td>
+  <td style="width: 499px;">Gets the information of a specific caregiver with the caregiverID using the method "getCaregiver" from the adminCaregiverData.java  .<br> This will displays more information of that specific caregiver <br> Uses a JavaScript to print the information </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminCreateCaregiver2.js</td>
+  <td style="width: 499px;">Displays with a specific format more of the data of the specific caregiver brought by the adminCaregiverInfo servlet .<br> Uses an AJAX linked to the action of clicking the "Show more Caregiver Info" that displays more information of that specific caregiver  </td>
+  </tr>
+
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminCaregiverMoreInfoAjax.js</td>
+  <td style="width: 499px;">Displays more of the data of the caregivers using the "getmoreCaregiverInfo" servlet that brings the needed information of that caregiver.<br> There is also a trash button to delete this caregiver from the workforce that calls the "request" servlet to update the enrollmentstatus to a 2. </td>
+  </tr>
+
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">getCaregiverExtraInfo2.java</td>
+  <td style="width: 499px;">Gets the caregiver extra info the AJAX requests. </td>
+  </tr>
+
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">noincidences.html</td>
+  <td style="width: 499px;">If there are no incidendes, the button with the "0" number will redirect the web to this html. In this html there is a button and when it is clicked it takes the user back to the adminCaregiver servlet. </td>
+  </tr>
+
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminIncperCaregiver.java</td>
+  <td style="width: 499px;">If there are incidendes, the button with the "#" number will redirect the web to this servlet. In this servlet there is a list of the incidences of that caregiver.<br> Uses a JavaScript to print the information </td>
+  </tr>
+
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="adminIncident">Manage Incidences</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> This servlet displays a list of the incidents made by the clients about a caregiver involved in a specific job. <br>Here a list of all of the incidences in the database is displayed with the date, subject and datecreated.</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Use:<br>The administator profile is the only one that can access to this full information , who made it, about whom, because of what and when. <br> When the administrators check the incidences list and read what had happened, they can create a "warning" that actually warns the caregiver that the clients have had a bad experience (without telling which client made the notice, for security) and because of that he/she can be fired. </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminIncident.java</td>
+  <td style="width: 499px;">Gets the information of the incidents from the database. This uses the method "getadminIncidentData" from the "adminIncidentData.java" in order to get the info about an incident.  <br>Uses JavaScript to print the list.</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminCreateIncidentList.js</td>
+  <td style="width: 499px;"> Prints the list of all of the incidences whith a specific format<br>Each incident name is a link that redirects the user to the "adminIncidenceInfo" servlet. </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminIncidenceInfo.java</td>
+  <td style="width: 499px;"> Gets more information of a specific incident using various methods from the "adminIncidentData.java" file. This will get more information like who posted it, about who and why. <br>  At the bottom of the incident info, there is a button that says "Create a warning for this caregiver". <br>Uses JavaScript to print this information. <br> Uses AJAX to create a warning to the caregiver. </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminCreateIncidentInfo.js</td>
+  <td style="width: 499px;"> Prints the information of that specific incident brought by the "adminIncidenceInfo" servlet.  <br>Uses JavaScript to print this information. </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminCreateIncidentInfoAJAX.js</td>
+  <td style="width: 499px;"> By clicking on the "Send warning to caregiver" button a form appears in the bottom of the page with the employmentID, caregiverID and clientID brought by the "getEmployment" method the AJAX calls.  <br>Uses JavaScript to print this information. </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">getEmploymentID.java</td>
+  <td style="width: 499px;"> Contains the method "getEmployment" called by the "adminCreateIncidentInfoAJAX.js".  <br>Uses JavaScript to print this information. </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">sendWarning.java</td>
+  <td style="width: 499px;"> By clicking on the "Send Warning to Caregiver #" button this excecutes the "sendWarning" servlet that inserts the information to the database.  <br>This button also redirects the user to the incidents list. </td>
+  </tr>
+
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="adminIncidenceAnalytics">View Incidences Analytics</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> This servlet displays graphs, using google charts tool, to examine incidences analytics. </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Use:<br>As an administator with this pie graph I can see what percentage of the notices made by the clients are incidents.</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminIncidenceAnalytics.java</td>
+  <td style="width: 499px;">Gets the information from the Notices table using the methods that are in the "adminIncidenceAnalyticsData" file, and calls the source of the google charts to be able to draw the graphs. <br> Uses JavaScript to place the graph in place.</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminCreateIncidenceAnalytics.js</td>
+  <td style="width: 499px;">Indicates where does the charts are append to and print it.</td>
+  </tr>
+
+
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="adminJobAnalytics">View Job Analytics</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> This servlet displays graphs, using google charts tool, to examine jobs analytics. </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Use:<br>As an administator with this graphs I can see statistics of the jobs as how many hours per week does a client requires or the status of the jobs.</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminJobAnalytics.java</td>
+  <td style="width: 499px;">Gets the information from the EmploymentRecord table using the methods that are in the "adminJobAnalyticsData" file, and calls the source of the google charts to be able to draw the graphs. <br> Uses JavaScript to place the graphs in place.</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">adminCreateJobAnalytics2.js</td>
+  <td style="width: 499px;">Indicates where does the charts are append to and print them.</td>
+  </tr>
+
+  </tbody>
+  </table>
+
+<table border="1" style="width: 818px;">
+<tbody>
+<tr>
+<td style="width: 806px;" colspan="3">Alejandra Ariza Lagares</td>
+</tr>
+<tr style="width: 806px;" colspan="3">READ BEFORE: These are the functionalities I am in charge of. I have listed the links of each one of them but it is importat to note that some of them will not work if accesed independently because they might require prior parameters from other servlets. It is also important that the login needs to be done first in order to get and mantain the session.</tr>
+<tr>
+<td style="width: 806px;" colspan="3"><span><a href = "http://localhost:8082/HelpHunters/INICIOALE.html">Log-in</a></span></td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Description:<br> By clicking in the top/right corner of the page in the Login/Register tab and then selecting the Client tab, the Login form will be displayed</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Use:<br>I recommend the use of the following username and password when accesing the page. I made sure there are enough entries in the database for a perfect visualization of the functionalites that I am in charge of. However, any one of the user/pass combinations in the database will work correctly.<br>email: rwithull1@nydailynews.com <br>password: EXNZAaa </td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">INICIOALE.html</td>
+<td style="width: 499px;">This is the home page of the website. </td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">CheckLoginAle.java</td>
+<td style="width: 499px;"> This servlet makes sure that the email and password combination are entered correctly, by looking for the client in the database. If entered correctly, the page will be redirected to the clientHome.java page. </td>
+</tr>
+
+<tr>
+<td style="width: 806px;" colspan="3"><a href = "http://localhost:8082/HelpHunters/displayCaregiversAle">Display Caregivers</a></td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Description:<br>After succesfully logging in, you will access the clientHome.java page. In this page, you can access all of the different tabs located in the header dropdown in the top right corner as well as searching for caregivers in any selected province. In the dropdown menu seen in the middle of the page, you will see all 52 provinces of Spain and will be able to select the one where you would like to request a service. When selecting any of these provinces, you will be redirected to the displayCaregiver page where a list of the available caregivers in the selected province will be displayed.</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Use:<br>I recommend selecting any of the following provinces: <br>Cadiz <br>Gipuzkoa <br> Barcelona <br>However, any of the provinces will redirect to the displayCaregiver page but some of the provinces do not have any registries in the (Caregiver/Province) table so will not display any caregivers in the list.</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">clientHome.java</td>
+<td style="width: 499px;"> In this page, the client can select the province in which they would like to request the service.</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">displayCaregiverAle.java</td>
+<td style="width: 499px;"> This page displays all the caregivers available to work in the selected province. <br> Uses JavaScript to generate the caregiver listing displayed (displayCaregiverAle.js)  </td>
+</tr>
+
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">caregiverDataAle.java</td>
+<td style="width: 499px;"> This page contains all the classes and functions related to the caregivers. In this function precisely, the getCaregiverProvinceList() is used to SELECT the caregivers in the selected province from the database.   </td>
+</tr>
+
+<tr>
+<td style="width: 806px;" colspan="3"><a href = "http://localhost:8082/HelpHunters/caregiverProfileAle">Caregiver Profile</a></td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Description:<br> In the displayCaregiver page, each of the caregivers displayed have a button called "View Profile" which will take you to the caregivers profile and will also register the view of this caregivers page in the ProfileViews table. This table recollects all of the caregiver profile views for the use of the Caregivers Dashboard</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Use:<br>Any of the caregivers can be selected and will show their own profile with their reviews from other clients. After visiting the page, the client can make a more consious decision and consider the job offer or not.</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">displayCaregiverAle.java</td>
+<td style="width: 499px;"> In this page, the caregivers from the selected province will be displayed. </td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">caregiverProfileAle.java</td>
+<td style="width: 499px;"> This page displays the selected caregiver's profile, where the client is able to either send a message or directly offer a job to the caregiver.  </td>
+</tr>
+
+
+<tr>
+<td style="width: 806px;" colspan="3"><a href = "http://localhost:8082/HelpHunters/caregiverProfileAle">Send Message</a></td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Description:<br> In the caregiverProfile page, you can see the Send a Message button. This button displays a Pop-up with a form. This form allows the client to write a subject and a message to the caregiver. This is useful to ask any relevant questions prior to the job offer. When the message is sent, it will directly appear in the Message table in the database. The fields of (reply, datereplied and replyhasbeenread) will remain empty until the caregiver fills it himself or herself. </td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Use:<br> Write a Subject and a Message and click Send. </td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">caregiverProfileAle.java</td>
+<td style="width: 499px;"> This page displays the selected caregiver's profile, where the client is able to Send a Message through the popup </td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">sendMessageAle.java</td>
+<td style="width: 499px;"> This servlet will construct the message object and then insert it to the database.  </td>
+</tr
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">messageDataAle.java</td>
+<td style="width: 499px;"> This file contains all the classes related to messages. In this function the sendMessage() is used to INSERT the message into the database.  </td>
+</tr>
+
+<tr>
+<td style="width: 806px;" colspan="3"><a href = "http://localhost:8082/HelpHunters/clientReviewsPage">Reviews</a></td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Description:<br> This page can be accesed through the dropdown menu located in the header (Reviews Tab) This will display first the reviews other caregivers have written about me, and will also generate a list of the pending reviews i have to make about the caregivers that i have contracted.</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Use:<br> You can view the reviews on the left side and the pending reviews on the right side. Below each of the pending reviews, there is a button named "Leave a Review". This will open a popup with a form to leave the selected caregiver's review. This will then be inserted into the database.</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">clientReviewsPage.java</td>
+<td style="width: 499px;"> This page displays all the reviews. </td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">insertReviewAle.java</td>
+<td style="width: 499px;"> This servlet will construct the review object and then insert it to the database. </td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">reviewDataAle.java</td>
+<td style="width: 499px;"> This file includes all the classes related to the reviews. The function insertReview() is used to INSERT the message into the database. </td>
+</tr>
+
+<tr>
+<td style="width: 806px;" colspan="3"><a href = "http://localhost:8082/HelpHunters/clientMessagesAle">Inbox</a></td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Description:<br> This page can be accesed through the dropdown menu located in the header (Messages). When clicking this tab, the message Inbox will be displayed. </td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Use:<br> You can view all the messages the client has send to caregivers. Each message shows the caregiver, subject and date of the message to be able to locate it easily. There is a button in the right side of each message that will redirect to the displayMessage page in which the contents of the message can be seen. </td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">clientMessagesAle.java</td>
+<td style="width: 499px;"> This page displays the inbox. <br> This page uses Javascript to print the inbox table. (displayMessagesAle.js) </td>
+</tr>
+
+<tr>
+<td style="width: 806px;" colspan="3"><a href = "http://localhost:8082/HelpHunters/displayMessageAle">Display Message</a></td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Description:<br> This page shows the message contents inside of any message displayed in the inbox.</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Use:<br> The subject and message of the selected message will be displayed in a chat mode. If the caregiver has replied, the reply will be shown. If he has not replied, the message will remain empty.  </td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">displayMessageAle.java</td>
+<td style="width: 499px;"> This page displays the contents of the message </td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+  <table border="1" style="width: 818px;">
+    <tbody>
+    <tr><td style="width: 806px;" colspan="3">
+     Name: TERESA IBARRA </td></tr>
+    <tr><td style="width: 806px;" colspan="3"> Contents of this directory:</td></tr>
+
+<tr><td style="width: 806px;" colspan="3">Caregivers: Directory that contains the files to run the Cloud SQL Proxy</td></tr>
+
+<tr><td style="width: 806px;" colspan="3">HelpHuntersApp: Project Directory that contains the source code of my Web Application</td></tr>
+
+<tr><td style="width: 806px;" colspan="3">Project Help Hunters.PDF: Explanation about the infrastructure and database of the project.</td></tr>
+
+<tr><td style="width: 806px;" colspan="3">Teresa Help Hunters.mp4: my video demonstrating my web application at run time and the implementation of my use cases.</td></tr>
+
+
+<tr><td style="width: 806px;" colspan="3">I find it important to say that I merged my code with part of Alejandra Ariza's, since we both programmed the clients' interface. All of the functionalities and web pages I coded are specified in the video. However, in order to avoid any misunderstandings, I will list them below:</td></tr>
+
+<tr><td style="width: 806px;" colspan="3">- Client Registration</td></tr>
+<tr><td style="width: 806px;" colspan="3">- A client's own profile view</td></tr>
+<tr><td style="width: 806px;" colspan="3" >- Send Job Offers</td></tr>
+<tr><td style="width: 806px;" colspan="3">- Job Employment Details</td></tr>
+<tr><td style="width: 806px;" colspan="3">- Terminating job offers</td></tr>
+<tr><td style="width: 806px;" colspan="3">- Sending notices to the company</td></tr>
+<tr><td style="width: 806px;" colspan="3">- Viewing a client's notices exchanged with the company</td></tr>
+<tr><td style="width: 806px;" colspan="3">- Client Settings</td></tr>
+<tr><td style="width: 806px;" colspan="3">- Logout</td></tr>
+</tbody>
+</table>
+
+<table border="1" style="width: 818px;">
+  <tbody>
+  <tr>
+  <td style="width: 806px;" colspan="3">Author: Corina Garrido S.</td>
+  </tr>
+  <tr style="width: 806px;" colspan="3">READ BEFORE: First, you need to log in because all the functionalities are linked to a session that is created when the caregiver logs in, the functionalities are programmed for all the caregivers in the database but for this especial caregiver you will see the performance of the servlets on their best</tr>
+  <tr>
+  <td style="width: 806px;" colspan="3">This work is made in a Mac PC so if you want to run it in a Windows PC the changes have to be made in the ConnectionUtils.java </td>
+  </tr>
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="CaregiversLogin">CaregiversLogin.java</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> In this page the caregiver will log in, with his/her user and password, they need to be register first <br>You will need put a username and its password and this servlet will see if they match, and it will create a session and this will be the input to the servlets, as we learn in class</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Testing:<br>You can try with the following ones <br>username: ezekiel@chui.com<br>password: 6Kr$1Ad </td>
+  </tr>
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="Dashboard">Dashboard.java</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> This page is very visual, the caregiver can use it to see how many reviews and views this month has, at the end there is a graphic so the caregiver can see how many views have had in a year</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Testing:<br>I create getNumberOfReviewsOfCaregiver and getNumberOfProfileViewsOfCaregiver in CaregiverDashboardData.java to help me get de numbers to show it in the page, with sql sentences. For the graphic I created a vector that count how many views the username has by month in one specific year, I used java script and json in this part<br></td>
+  </tr>
+  <td style="width: 806px;" colspan="3"><a href="NotesCaregiver">NotesCaregiver.java</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> In this page the caregiver will be able to see if he/she has personal notes, also he/she will be able to update or create a note </td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Testing:<br>The cargiver will need to select the priority of the note, with the help of a list. In NotesDate I created getCaregiverNotes to help me select the notes of each caregiver and from this servlet the caregiver can go to CaregiverNoteEdit to update his/her note<br></td>
+  </tr>
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="CaregiverNoteEdit">CaregiverNoteEdit.java</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br>In this page the caregiver can update his/her note, the body and status</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Testing:<br>to select the priority of the note, I did a list to help the caregiver in his/her decision, you will need the data that you want to change </td>
+  </tr>
+<tr>
+  <td style="width: 806px;" colspan="3"><a href="CaregiverNotesUpdate">CaregiverNotesUpdate.java</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br>his is de action of CaregiverNotesUpdate and will do the back end of updating the note with the help of updateNote, created in NotesData</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Testing:<br>The caregiver in this servlet wont do anything</td>
+  </tr>
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="CaregiverNoteInsert">CaregiverNoteInsert.java</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br>Sort description: In this servlet the caregiver will be able to add a note to his/her page and this note will also be added to the database</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Testing:<br>To do this part of testing the app, yo will need the body, the date when the caregiver create the note and de priority of the note</td>
+  </tr>
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="CaregiverAddNote">CaregiverAddNote.java</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br>This is de action of CaregiverNoteInsert and will do the back end of enter a new note to the database with the help of insertNote, created in NotesData</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Testing:<br>The caregiver in this servlet wont do anything</td>
+  </tr>
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="CaregiverMsg">CaregiverMsg.java</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br>It is important to know that the service that Help Hunters offers to their clients it is that they can reach the caregivers, not the other way around, if they want to know some specific thing about their experiences or their habilitites. The conversation is based in one question and one reply. In this page the caregiver will be able to see their messages with different clients and answer those who he/she hasnt done yet</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Testing:<br>The testing is very userfrendly and easy to follow, the methods that I use, I created them in MessagesData, and they help me to get to the information of the database</td>
+  </tr>
+<tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Note:<br>como programe con mac con UcanAcces el driver para correr en mac, no podia ver la base de datos como tal, entonces probaba con mysqlworkbench para ver si si se estaban haciendo los cambios que queria, por lo que el codigo sql con respecto a las dates, puede salir problema si no se hace con mysql o con ucanacces</td>
+  </tr>
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="CaregiverMsgBox">CaregiverMsgBox.java</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br>This servlet show the caregiver an specific coversation, after clicking the name of the client</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Testing:<br>The testing is very userfrendly and easy to follow, you can see the caregivers conversations clicking in each one of them, the methods that I use, I created them in MessagesData, and they help me to get to the information of the database</td>
+  </tr>
+<tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Note:<br>como programe con mac con UcanAcces el driver para correr en mac, no podia ver la base de datos como tal, entonces probaba con mysqlworkbench para ver si si se estaban haciendo los cambios que queria, por lo que el codigo sql con respecto a las dates, puede salir problema si no se hace con mysql o con ucanacces</td>
+  </tr>
+  <tr>
+  <td style="width: 806px;" colspan="3"><a href="sendReply">sendReply.java</a></td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br>This servlet is used by the caregiver to help him to reply to the messages started by the cliente</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Testing:<br>The testing is very easey, you will need to know what do you want to answer, write it down and send it and it will be saved in the database and the answer will get to the client. The methods that I use in this servlet are in MessagesData</td>
+  </tr>
+  <tr>
+</tbody>
+  </table>
+
+
+  <table border="1" style="width: 818px;">
+  <tbody>
+  <tr>
+  <td style="width: 806px;" colspan="3">Monica Tamayo</td>
+  </tr>
+  <tr>
+
+  <td style="width: 806px;" colspan="3">Register as a Caregiver (<a href="REGISTER-CARETAKERS.html">REGISTER-CARETAKERS.html</a>)</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> This function shows a form to enter information as caregiver who wants to work within the app. When the caregiver submits the information, it will be stored in the database but can't be shown until the administrators accept this worker.</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Use:<br>In the bottom of INICIO.html you'll find a link to this form. You have to fill the fields and submit the data.</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">caregiverData.java</td>
+  <td style="width: 499px;">Inserts data on table Caregiver</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 220px;">caregiverRegister.java</td>
+  <td style="width: 499px;">Takes the information from the form and saves it in the data constructor so it can be inserted in the table Caregiver</td>
+  </tr>
+
+  <td style="width: 806px;" colspan="3">Show job offers (<a href="caregiverJobs">caregiverJobs.java</a>)</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> This function shows a list of the jobs offered to this caregiver. The buttons under the clients names give you the posibility to see the profile of the client offering a job and also to accept or decline such job. </td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 719px;" colspan="2">Use:<br>In the login form select caregiver tab and use the following data:<br>user: art@venere.org<br>password: 3Dj/0Ve! <br>and on the side menu click on Jobs - Manage Jobs.</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">caregiverData.java</td>
+      <td style="width: 499px;">Reads data from tables Caregivers and EmploymentRecord.</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">caregiverJobs.java</td>
+      <td style="width: 499px;">Uses javascript to print the job's list and buttons. (createJobList.js)</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">employmentData.java</td>
+      <td style="width: 499px;">Updates data from table EmploymentRecord.</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">status.java</td>
+      <td style="width: 499px;">Changes the value of status column in table EmploymentRecord.<br>Accept changes status to 2.<br>Decline changes status to 3.</td>
+  </tr>
+
+  <td style="width: 806px;" colspan="3">Client profile (<a href="viewClientProfile">viewClientProfile.java</a>)</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> This function shows the profile of a client.</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 719px;" colspan="2">Use:<br>When clicking the view profile in caregiverJobs, select client: Rosalia Withull <br>From caregiver: art@venere.org<br>password: 3Dj/0Ve!</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">clientData.java</td>
+      <td style="width: 499px;">Reads data from table Client.</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">employmentData.java</td>
+      <td style="width: 499px;">Counts the number of hires made by the client.</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">reviewsData.java</td>
+      <td style="width: 499px;">Reads data from table ClientRating. <br>Makes an average of the ratings made by the caregivers.</td>
+  </tr>
+
+  <td style="width: 806px;" colspan="3">Caregiver reviews (<a href="caregiverReviews">caregiverReviews.java</a>)</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> This function shows two columns, the first one is a list of the reviews made to this caregiver from past jobs. The second shows the pending reviews to clients from past jobs (reviews the caregiver makes to the client). </td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 719px;" colspan="2">Use:<br>In the login form select caregiver tab and use the following data:<br>user1: josephine@darak.org<br>password1: 3Mz)4Zj+<br>user2: simona@morasca.com<br>password2: 6Jy%6Tf&</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">reviewsData.java</td>
+      <td style="width: 499px;">Reads data from tables CaregiverRating, ClientRating, EmploymentRecord, Caregiver and Client</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">caregiverReviews.java</td>
+      <td style="width: 499px;">Shows the reviews made to the caregiver and the pending reviews to clients.</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">status.java</td>
+      <td style="width: 499px;">Changes the value of status column in table EmploymentRecord.<br>Accept changes status to 2.<br>Decline changes status to 3.</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">viewClientProfile.java</td>
+      <td style="width: 499px;">Shows the client's profile.</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">clientData.java</td>
+      <td style="width: 499px;">Reads data from table Client.</td>
+  </tr>
+
+  <td style="width: 806px;" colspan="3">Caregiver settings (<a href="caregiverSettings">caregiverSettings.java</a>)</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> This function shows a form for updating the caregivers information. </td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 719px;" colspan="2">Use:<br>In the first login select caregiver tab and use the following data:<br>user: josephine@darak.org<br>password: 3Mz)4Zj+<br>or any caregiver data.</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">caregiverData.java</td>
+      <td style="width: 499px;">Reads data from tables Caregiver and caregiverProvinces.<br>Updates the table Caregiver.</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">caregiverUpdate.java</td>
+      <td style="width: 499px;">Takes data from the form and saves it in the data constructor so it can be used to update the tables Caregiver and caregiverProvinces .</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">provincesData.java</td>
+      <td style="width: 499px;">Reads data from table caregiverProvinces.<br>Inserts in the table caregiverProvinces.<br>Updates the table caregiverProvinces.</td>
+  </tr>
+
+  <td style="width: 806px;" colspan="3">Caregiver warnings (<a href="caregiverWarnings">caregiverWarnings.java</a>)</td>
+  </tr>
+  <tr>
+  <td style="width: 87px;"></td>
+  <td style="width: 719px;" colspan="2">Description:<br> This function shows a list of the warnings made by the administrators and a button to mark this warning as seen. </td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 719px;" colspan="2">Use:<br>In the login form select caregiver tab and use the following data:<br>user: simona@morasca.com<br>password: 6Jy%6Tf&<br>and on the side menu click on Jobs - Warnings</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">warningData.java</td>
+      <td style="width: 499px;">Reads data from tables Caregiver, Notice, WarningToCaregiver and EmploymentRecord.<br>WarningToCaregiver.</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">caregiverWarnings.java</td>
+      <td style="width: 499px;">Uses JavaScript for showing the list of warnings and the "seen" button.(createWarningList.js)</td>
+  </tr>
+  <tr>
+      <td style="width: 87px;"></td>
+      <td style="width: 220px;">seen.java</td>
+      <td style="width: 499px;">Updates table WarningToCaregiver.</td>
+  </tr>
+
+  </tbody>
+  </table>
+
+
+
+
+
+
+
+</body>
+
 </html>
