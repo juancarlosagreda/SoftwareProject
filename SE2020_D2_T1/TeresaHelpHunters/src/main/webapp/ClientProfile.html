@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <title>Help Hunters</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colors/blue.css">
+
+</head>
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header Container
+    ================================================== -->
+    <header id="header-container" class="fullwidth">
+
+        <!-- Header -->
+        <div id="header">
+            <div class="container">
+
+                <!-- Left Side Content -->
+                <div class="left-side">
+
+                    <!-- Logo -->
+                    <div id="logo">
+                        <a href="indexTeresa.html"><img src="images/logo.png" alt=""></a>
+                    </div>
+
+
+                </div>
+                <!-- Left Side Content / End -->
+
+
+                <!-- Right Side Content / End -->
+                <div class="right-side">
+
+                    <!-- User Menu -->
+                    <div class="header-widget">
+
+                        <!-- Messages -->
+                        <div class="header-notifications user-menu">
+                            <div class="header-notifications-trigger">
+                                <a href="#"><div class="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt=""></div></a>
+                            </div>
+
+                            <!-- Dropdown -->
+                            <div class="header-notifications-dropdown">
+
+                                <!-- User Status -->
+                                <div class="user-status">
+
+                                    <!-- User Name / Avatar -->
+                                    <div class="user-details">
+                                        <div class="user-avatar status-online"></div>
+                                        <div class="user-name" id="clientName">
+                                        </div>
+                                    </div>
+
+                                <ul class="user-menu-small-nav">
+                                    <li><a href="ClientProfile.html"><i class="icon-material-outline-face"></i> View my Profile </a></li>
+                                    <li><a href="REVIEWS_CLIENTS.html"><i class="icon-material-outline-rate-review"></i> Reviews</a></li>
+                                    <li><a href="MESSAGES_CLIENTS.html"><i class="icon-material-outline-dashboard"></i> Messages</a></li>
+                                    <li><a href="ViewNotices.html"><i class="icon-feather-send"></i> Notices</a></li>
+                                    <li><a href="JobOffersDetail.html"><i class="icon-material-outline-business-center"></i> Job Offers</a></li>
+                                    <li><a href="ClientSettings.html"><i class="icon-material-outline-settings"></i> Settings</a></li>
+                                    <li><a onclick = "logout()"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- User Menu / End -->
+
+                    <!-- Mobile Navigation Button -->
+                    <span class="mmenu-trigger">
+					<button class="hamburger hamburger--collapse" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+                    </span>
+                 </div>
+
+
+                 <!-- Right Side Content / End -->
+
+                </div>
+            </div>
+        </div>
+    </header>
+        <!-- Header / End -->
+
+
+
+    <div class="clearfix"></div>
+    <!-- Header Container / End -->
+
+
+
+    <!-- Titlebar
+    ================================================== -->
+    <div class="single-page-header freelancer-header" data-background-image="images/single-freelancer.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="single-page-header-inner">
+                        <div class="left-side">
+                            <div class="header-details">
+                                <h3 style="margin-left: 0px">Client</h3>
+                                <br>
+                                <h3 style = "margin-left: 0px" id="nameClient"></h3>
+                                <br>
+                                <h4 id="email"></h4>
+                                <h4 id="gender"></h4>
+                                <ul>
+                                    <li><div class="verified-badge-with-title">Verified</div></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Page Content
+    ================================================== -->
+    <div class="container">
+        <div class="row">
+
+
+
+            <!-- Sidebar -->
+            <div class="col-xl-4 col-lg-4">
+                <div class="sidebar-container">
+
+                    <!-- Profile Overview -->
+                    <div class="profile-overview">
+                        <div class="overview-item"><strong id="offersNumber"></strong><span>Number of Offered Jobs</span></div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="profile-overview">
+                        <div class="overview-item"><strong id="hoursNumber"></strong><span>Total hours of Employment Offered in one Week</span></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Spacer -->
+    <div class="margin-top-15"></div>
+    <!-- Spacer / End-->
+
+    <!-- Footer -->
+    <div class="dashboard-footer-spacer"></div>
+    <div class="small-footer margin-top-15">
+        <div class="small-footer-copyrights">
+            © 2020 <strong>Help Hunters</strong>. All Rights Reserved.
+        </div>
+        <ul class="footer-social-links">
+            <li>
+                <a href="#" title="Facebook" data-tippy-placement="top">
+                    <i class="icon-brand-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Twitter" data-tippy-placement="top">
+                    <i class="icon-brand-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Google Plus" data-tippy-placement="top">
+                    <i class="icon-brand-google-plus-g"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="LinkedIn" data-tippy-placement="top">
+                    <i class="icon-brand-linkedin-in"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <!-- Footer / End -->
+
+</div>
+<!-- Wrapper / End -->
+
+<!-- Scripts
+================================================== -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-migrate-3.1.0.min.js"></script>
+<script src="js/mmenu.min.js"></script>
+<script src="js/tippy.all.min.js"></script>
+<script src="js/simplebar.min.js"></script>
+<script src="js/bootstrap-slider.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/snackbar.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="js/counterup.min.js"></script>
+<script src="js/magnific-popup.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/logout.js"></script>
+<script src="js/profileDisplay.js"></script>
+
+<!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
+<script>
+    // Snackbar for user status switcher
+    $('#snackbar-user-status label').click(function() {
+        Snackbar.show({
+            text: 'Your status has been changed!',
+            pos: 'bottom-center',
+            showAction: false,
+            actionText: "Dismiss",
+            duration: 3000,
+            textColor: '#fff',
+            backgroundColor: '#383838'
+        });
+    });
+
+    // Snackbar for "place a bid" button
+    $('#snackbar-place-bid').click(function() {
+        Snackbar.show({
+            text: 'Your bid has been placed!',
+        });
+    });
+
+
+    // Snackbar for copy to clipboard button
+    $('.copy-url-button').click(function() {
+        Snackbar.show({
+            text: 'Copied to clipboard!',
+        });
+    });
+</script>
+
+</body>
+</html>

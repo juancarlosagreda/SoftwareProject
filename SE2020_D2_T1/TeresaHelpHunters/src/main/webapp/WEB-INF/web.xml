@@ -1,0 +1,129 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>TeresaClientRegistration</servlet-name>
+  	<display-name>TeresaClientRegistration</display-name>
+  	<servlet-class>TeresaClientRegistration</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  	<servlet-name>TeresaClientRegistration</servlet-name>
+  	<url-pattern>/TeresaClientRegistration</url-pattern>
+  </servlet-mapping>
+
+	<servlet>
+		<servlet-name>TeresaCheckLogin</servlet-name>
+		<display-name>TeresaCheckLogin</display-name>
+		<servlet-class>TeresaCheckLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TeresaCheckLogin</servlet-name>
+		<url-pattern>/TeresaCheckLogin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TeresaClientProfile</servlet-name>
+		<display-name>TeresaClientProfile</display-name>
+		<servlet-class>TeresaClientProfile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TeresaClientProfile</servlet-name>
+		<url-pattern>/TeresaClientProfile</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TeresaJobOffersDetail</servlet-name>
+		<display-name>TeresaJobOffersDetail</display-name>
+		<servlet-class>TeresaJobOffersDetail</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TeresaJobOffersDetail</servlet-name>
+		<url-pattern>/TeresaJobOffersDetail</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TeresaTerminateJob</servlet-name>
+		<display-name>TeresaTerminateJob</display-name>
+		<servlet-class>TeresaTerminateJob</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TeresaTerminateJob</servlet-name>
+		<url-pattern>/TeresaTerminateJob</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TeresaFileNotice</servlet-name>
+		<display-name>TeresaFileNotice</display-name>
+		<servlet-class>TeresaFileNotice</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TeresaFileNotice</servlet-name>
+		<url-pattern>/TeresaFileNotice</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>caregiverProfile</servlet-name>
+		<display-name>caregiverProfile</display-name>
+		<servlet-class>caregiverProfile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>caregiverProfile</servlet-name>
+		<url-pattern>/caregiverProfile</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TeresaNoticeList</servlet-name>
+		<display-name>TeresaNoticeList</display-name>
+		<servlet-class>TeresaNoticeList</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TeresaNoticeList</servlet-name>
+		<url-pattern>/TeresaNoticeList</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>clientHome</servlet-name>
+		<display-name>clientHome</display-name>
+		<servlet-class>clientHome</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>clientHome</servlet-name>
+		<url-pattern>/clientHome</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>displayCaregivers</servlet-name>
+		<display-name>displayCaregivers</display-name>
+		<servlet-class>displayCaregivers</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>displayCaregivers</servlet-name>
+		<url-pattern>/displayCaregivers</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TeresaLogout</servlet-name>
+		<display-name>TeresaLogout</display-name>
+		<servlet-class>TeresaLogout</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TeresaLogout</servlet-name>
+		<url-pattern>/TeresaLogout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TeresaSendOffer</servlet-name>
+		<display-name>TeresaSendOffer</display-name>
+		<servlet-class>TeresaSendOffer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TeresaSendOffer</servlet-name>
+		<url-pattern>/TeresaSendOffer</url-pattern>
+	</servlet-mapping>
+
+</web-app>
