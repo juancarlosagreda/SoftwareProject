@@ -34,7 +34,7 @@ public class adminLoginPrintPage {
         str.append("</div>");
         str.append("<!-- Account Type -->");
         str.append("<!-- Form -->");
-        str.append("<form method='get' action='adminLoginValidation' id='login-form'>");
+        str.append("<form method='get' action='adminRequest' id='login-form'>");
         str.append("<center>  ");
         str.append("<div class='col-xl-6'>");
             str.append("<i class='icon-material-baseline-mail-outline'>");
@@ -172,7 +172,7 @@ public class adminLoginPrintPage {
           str.append("</div>");
           str.append("<!-- Account Type -->");
           str.append("<!-- Form -->");
-          str.append("<form method='get' action='adminLoginValidation' id='login-form'>");
+          str.append("<form method='get' action='adminRequest' id='login-form'>");
           str.append("<center>  ");
           str.append("<div class='col-xl-6'>");
               str.append("<i class='icon-material-baseline-mail-outline'>");
@@ -183,6 +183,7 @@ public class adminLoginPrintPage {
               str.append("<i class='icon-material-outline-lock'>");
               str.append("</i>");
               str.append("<input type='password' class='input-text with-border' name='password' id='password' placeholder='Password' required/>");
+              str.append("<span id='alertContainer' style='color: red;'>Your password is incorrect</span>");
             str.append("</div>");
             str.append("<a href='#' class='forgot-password'>Forgot Password?");
             str.append("</a>");
@@ -270,7 +271,7 @@ public class adminLoginPrintPage {
           str.append("<!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->");
           str.append("<script src='snackbarLabel.js'>");
           str.append("</script>");
-          str.append("<script>alert(\"The username or password is incorrect.\")</script>");
+          //str.append("<script>alert(\"The username or password is incorrect.\")</script>");
           str.append("</body>");
           str.append("</html>");
 

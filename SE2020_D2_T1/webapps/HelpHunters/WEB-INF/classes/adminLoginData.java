@@ -16,8 +16,8 @@ public class adminLoginData {
     }
 
     public static int getAdminAccess(Connection connection, String username, String password) {
-        String sql = "SELECT COUNT(*) FROM Administrator WHERE email = ? AND password = ?;";
-        System.out.println("update: " + sql);
+        String sql = "SELECT COUNT(email) FROM Administrator WHERE email = ? AND password = ?;";
+        System.out.println("Query performed: " + sql);
         int n = 0;
         try {
             PreparedStatement stm = connection.prepareStatement(sql);
@@ -34,6 +34,7 @@ public class adminLoginData {
             e.printStackTrace();
             System.out.println("Error in query: " + sql + " Exception: " + e);
         }
+        System.out.println(n);
         return n;
     }
 }

@@ -26,16 +26,22 @@ public class adminLoginValidation extends HttpServlet {
         PrintWriter toClient = res.getWriter();
 
         //We now use adminLoginData object to perform our query
-        int n = adminLoginData.getAdminAccess(connection, username, password);
+        int n = adminData.getAdminAccess(connection, username, password);
+        adminData admin = null;
 
         if(n == 0){
           //if there are no matches then we print the same login page
   				toClient.println(adminLoginPrintPage.printLoginError());
   				//we also have the method printLogin();
         } else {
+          //We get all of the admin info...
+          admin = adminData.getadminData(connection, username, password);
           //We create a session
           session = req.getSession(true);
           //Now we set the attributes of the Session
+          session.setAttribute("id", admin.administratorID);
+          session.setAttribute("fname", admin.firstname);
+          session.setAttribute("lname", admin.lastname);
           session.setAttribute("usr", username);
           session.setAttribute("pw", password);
 
@@ -47,4 +53,5 @@ public class adminLoginValidation extends HttpServlet {
 			  toClient.close();
 
 	}
+
 }
