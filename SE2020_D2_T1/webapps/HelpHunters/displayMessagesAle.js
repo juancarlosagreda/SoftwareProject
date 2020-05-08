@@ -50,7 +50,7 @@ function displayMessages() {
 		tablerow.appendChild(view);
 		
 		var seeMessage = document.createElement("a");
-		seeMessage.setAttribute("href","displayMessage?firstname=" + messageDataItem[i].firstname +"&lastname=" + messageDataItem[i].lastname +"&reply=" +messageDataItem[i].reply +"&subject=" +messageDataItem[i].subject +"&message=" +messageDataItem[i].message+"&datecreated=" +messageDataItem[i].datecreated);
+		seeMessage.setAttribute("href","displayMessageAle?firstname=" + messageDataItem[i].firstname +"&lastname=" + messageDataItem[i].lastname +"&reply=" +messageDataItem[i].reply +"&subject=" +messageDataItem[i].subject +"&message=" +messageDataItem[i].message+"&datecreated=" +messageDataItem[i].datecreated);
 		seeMessage.setAttribute("class","button dark ripple-effect");
 		seeMessage.innerHTML = "See Message";
 		view.appendChild(seeMessage);
