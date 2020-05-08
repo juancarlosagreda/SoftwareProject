@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app>
+    <servlet>
+        <servlet-name>CaregiverMsg</servlet-name>
+        <servlet-class>CaregiverMsg</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>CaregiverMsgBox</servlet-name>
+        <servlet-class>CaregiverMsgBox</servlet-class>
+    </servlet>
+    
+	<servlet>
+        <servlet-name>CaregiversLogin</servlet-name>
+        <servlet-class>CaregiversLogin</servlet-class>
+    </servlet>
+	
+	<servlet>
+        <servlet-name>CaregiverUtilsCori</servlet-name>
+        <servlet-class>CaregiverUtilsCori</servlet-class>
+    </servlet>
+
+	<servlet>
+        <servlet-name>ConnectionUtilsCori</servlet-name>
+        <servlet-class>ConnectionUtilsCori</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>Dashboard</servlet-name>
+        <servlet-class>Dashboard</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>NotesCaregiver</servlet-name>
+        <servlet-class>NotesCaregiver</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>CaregiverNoteEdit</servlet-name>
+        <servlet-class>CaregiverNoteEdit</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>CaregiverNotesUpdate</servlet-name>
+        <servlet-class>CaregiverNotesUpdate</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>CaregiverNoteInsert</servlet-name>
+        <servlet-class>CaregiverNoteInsert</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>CaregiverAddNote</servlet-name>
+        <servlet-class>CaregiverAddNote</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>MsgClient</servlet-name>
+        <servlet-class>MsgClient</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>sendReply</servlet-name>
+        <servlet-class>sendReply</servlet-class>
+    </servlet>
+	
+<servlet>
+  	<servlet-name>TeresaClientRegistration</servlet-name>
+  	<display-name>TeresaClientRegistration</display-name>
+  	<servlet-class>TeresaClientRegistration</servlet-class>
+  </servlet>
+	
+	<servlet>
+		<servlet-name>TeresaClientProfile</servlet-name>
+		<display-name>TeresaClientProfile</display-name>
+		<servlet-class>TeresaClientProfile</servlet-class>
+	</servlet>
+	 
+	<servlet>
+		<servlet-name>TeresaJobOffersDetail</servlet-name>
+		<display-name>TeresaJobOffersDetail</display-name>
+		<servlet-class>TeresaJobOffersDetail</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>TeresaTerminateJob</servlet-name>
+		<display-name>TeresaTerminateJob</display-name>
+		<servlet-class>TeresaTerminateJob</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>TeresaFileNotice</servlet-name>
+		<display-name>TeresaFileNotice</display-name>
+		<servlet-class>TeresaFileNotice</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>TeresaNoticeList</servlet-name>
+		<display-name>TeresaNoticeList</display-name>
+		<servlet-class>TeresaNoticeList</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>TeresaLogout</servlet-name>
+		<display-name>TeresaLogout</display-name>
+		<servlet-class>TeresaLogout</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>TeresaSendOffer</servlet-name>
+		<display-name>TeresaSendOffer</display-name>
+		<servlet-class>TeresaSendOffer</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>TeresaCheckLogin</servlet-name>
+		<display-name>TeresaCheckLogin</display-name>
+		<servlet-class>TeresaCheckLogin</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaCheckLogin</servlet-name>
+		<url-pattern>/TeresaCheckLogin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaSendOffer</servlet-name>
+		<url-pattern>/TeresaSendOffer</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaLogout</servlet-name>
+		<url-pattern>/TeresaLogout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaNoticeList</servlet-name>
+		<url-pattern>/TeresaNoticeList</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaFileNotice</servlet-name>
+		<url-pattern>/TeresaFileNotice</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaTerminateJob</servlet-name>
+		<url-pattern>/TeresaTerminateJob</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+  		<servlet-name>TeresaClientRegistration</servlet-name>
+  		<url-pattern>/TeresaClientRegistration</url-pattern>  
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TeresaJobOffersDetail</servlet-name>
+		<url-pattern>/TeresaJobOffersDetail</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet-mapping>
+		<servlet-name>TeresaClientProfile</servlet-name>
+		<url-pattern>/TeresaClientProfile</url-pattern>
+	</servlet-mapping>
+
+    
+    <servlet-mapping>
+        <servlet-name>CaregiverMsg</servlet-name>
+        <url-pattern>/CaregiverMsg</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>CaregiverMsgBox</servlet-name>
+        <url-pattern>/CaregiverMsgBox</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>CaregiversLogin</servlet-name>
+        <url-pattern>/CaregiversLogin</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CaregiverUtilsCori</servlet-name>
+        <url-pattern>/CaregiverUtilsCori</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ConnectionUtilsCori</servlet-name>
+        <url-pattern>/ConnectionUtilsCori</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Dashboard</servlet-name>
+        <url-pattern>/Dashboard</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>NotesCaregiver</servlet-name>
+        <url-pattern>/NotesCaregiver</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>CaregiverNoteEdit</servlet-name>
+        <url-pattern>/CaregiverNoteEdit</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>CaregiverNotesUpdate</servlet-name>
+        <url-pattern>/CaregiverNotesUpdate</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>CaregiverNoteInsert</servlet-name>
+        <url-pattern>/CaregiverNoteInsert</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>CaregiverAddNote</servlet-name>
+        <url-pattern>/CaregiverAddNote</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>MsgClient</servlet-name>
+        <url-pattern>/MsgClient</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>sendReply</servlet-name>
+        <url-pattern>/sendReply</url-pattern>
+    </servlet-mapping>
+	
+</web-app>
