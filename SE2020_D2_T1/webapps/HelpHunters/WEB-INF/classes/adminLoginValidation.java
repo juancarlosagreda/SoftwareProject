@@ -47,7 +47,7 @@ public class adminLoginValidation extends HttpServlet {
 
           //Once the session is created we redirect to adminDashboard
           //It would be useful to include session atributes in utils to save up the process
-          res.sendRedirect("tryUtils");
+          res.sendRedirect("adminRequest");
         }
 
 			  toClient.close();
