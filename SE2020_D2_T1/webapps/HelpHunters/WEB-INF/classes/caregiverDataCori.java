@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Date;
 
-public class caregiverData {
+public class caregiverDataCori {
     
 	/*Integer caregiverID;
     String firstname;
@@ -60,12 +60,12 @@ public class caregiverData {
     String month;
     String views;
     
-    caregiverData (String month, String views){
+    caregiverDataCori (String month, String views){
         this.month = month;
         this.views = views;
     }
     
-    public static Vector<caregiverData> getViews(Connection connection, String caregiverID, String year){
+    public static Vector<caregiverDataCori> getViews(Connection connection, String caregiverID, String year){
         
         System.out.println("ID?: " + caregiverID);
         
@@ -73,7 +73,7 @@ public class caregiverData {
         
         System.out.println("getViews: " + sql);
         
-        Vector<caregiverData> vec = new Vector<caregiverData>();
+        Vector<caregiverDataCori> vec = new Vector<caregiverDataCori>();
         
         try {
             PreparedStatement pstmt = connection.prepareStatement(sql);
@@ -83,7 +83,7 @@ public class caregiverData {
             
             while(result.next()){
                 
-                caregiverData x = new caregiverData(
+                caregiverDataCori x = new caregiverDataCori(
                     result.getString("Mes"),
                     result.getString("views")
                 );
@@ -106,7 +106,7 @@ public class caregiverData {
         System.out.println("Estoy en getViewsStr");
         //String[] months = { "January", "February", "March", "April", "May", "June", "July", "Agosto", "September", "October","November","December"};
         
-        Vector<caregiverData> vec = caregiverData.getViews(connection,caregiverID,year);
+        Vector<caregiverDataCori> vec = caregiverDataCori.getViews(connection,caregiverID,year);
         int size = vec.size();
         System.out.println("Estoy en getViewsStr y getViews me da un vector de tamano:" + size);
         String str = "[";
@@ -116,7 +116,7 @@ public class caregiverData {
         for (int i=1; i<=12; i++){  
             encontro = 0;
             for (int j=0; j<vec.size(); j++){
-                caregiverData x = vec.elementAt(j);
+                caregiverDataCori x = vec.elementAt(j);
                 if (Integer.parseInt(x.month) == i){
                     encontro = 1;
                     valorAGuardar = x.views;
