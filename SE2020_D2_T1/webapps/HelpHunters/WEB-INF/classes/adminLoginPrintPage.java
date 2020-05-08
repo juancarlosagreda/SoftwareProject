@@ -172,7 +172,7 @@ public class adminLoginPrintPage {
           str.append("</div>");
           str.append("<!-- Account Type -->");
           str.append("<!-- Form -->");
-          str.append("<form method='get' action='adminRequest' id='login-form'>");
+          str.append("<form method='get' action='adminLoginValidation' id='login-form'>");
           str.append("<center>  ");
           str.append("<div class='col-xl-6'>");
               str.append("<i class='icon-material-baseline-mail-outline'>");
