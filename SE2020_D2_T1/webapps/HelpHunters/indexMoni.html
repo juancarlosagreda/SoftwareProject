@@ -1,0 +1,178 @@
+<html><head></head><body><p></p>
+<table border="1" style="width: 818px;">
+<tbody>
+<tr>
+<td style="width: 806px;" colspan="3">Monica Tamayo</td>
+</tr>
+<tr>
+
+<td style="width: 806px;" colspan="3">Register as a Caregiver (<a href="REGISTER-CARETAKERS.html">REGISTER-CARETAKERS.html</a>)</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Description:<br> This function shows a form to enter information as caregiver who wants to work within the app. When the caregiver submits the information, it will be stored in the database but can't be shown until the administrators accept this worker.</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Use:<br>In the bottom of INICIO.html you'll find a link to this form. You have to fill the fields and submit the data.</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">caregiverData.java</td>
+<td style="width: 499px;">Inserts data on table Caregiver</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 220px;">caregiverRegister.java</td>
+<td style="width: 499px;">Takes the information from the form and saves it in the data constructor so it can be inserted in the table Caregiver</td>
+</tr>
+
+<td style="width: 806px;" colspan="3">Show job offers (<a href="caregiverJobs">caregiverJobs.java</a>)</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Description:<br> This function shows a list of the jobs offered to this caregiver. The buttons under the clients names give you the posibility to see the profile of the client offering a job and also to accept or decline such job. </td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 719px;" colspan="2">Use:<br>In the login form select caregiver tab and use the following data:<br>user: art@venere.org<br>password: 3Dj/0Ve! <br>and on the side menu click on Jobs - Manage Jobs.</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">caregiverDataMoni.java</td>
+    <td style="width: 499px;">Reads data from tables Caregivers and EmploymentRecord.</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">caregiverJobs.java</td>
+    <td style="width: 499px;">Uses javascript to print the job's list and buttons. (createJobList.js)</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">employmentDataMoni.java</td>
+    <td style="width: 499px;">Updates data from table EmploymentRecord.</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">status.java</td>
+    <td style="width: 499px;">Changes the value of status column in table EmploymentRecord.<br>Accept changes status to 2.<br>Decline changes status to 3.</td>
+</tr>
+
+<td style="width: 806px;" colspan="3">Client profile (<a href="viewClientProfile">viewClientProfile.java</a>)</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Description:<br> This function shows the profile of a client.</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 719px;" colspan="2">Use:<br>When clicking the view profile in caregiverJobs, select client: Rosalia Withull <br>From caregiver: art@venere.org<br>password: 3Dj/0Ve!</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">clientDataMoni.java</td>
+    <td style="width: 499px;">Reads data from table Client.</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">employmentDataMoni.java</td>
+    <td style="width: 499px;">Counts the number of hires made by the client.</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">reviewsDataMoni.java</td>
+    <td style="width: 499px;">Reads data from table ClientRating. <br>Makes an average of the ratings made by the caregivers.</td>
+</tr>
+
+<td style="width: 806px;" colspan="3">Caregiver reviews (<a href="caregiverReviews">caregiverReviews.java</a>)</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Description:<br> This function shows two columns, the first one is a list of the reviews made to this caregiver from past jobs. The second shows the pending reviews to clients from past jobs (reviews the caregiver makes to the client). </td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 719px;" colspan="2">Use:<br>In the login form select caregiver tab and use the following data:<br>user1: josephine@darak.org<br>password1: 3Mz)4Zj+<br>user2: simona@morasca.com<br>password2: 6Jy%6Tf&</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">reviewsDataMoni.java</td>
+    <td style="width: 499px;">Reads data from tables CaregiverRating, ClientRating, EmploymentRecord, Caregiver and Client</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">caregiverReviews.java</td>
+    <td style="width: 499px;">Shows the reviews made to the caregiver and the pending reviews to clients.</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">status.java</td>
+    <td style="width: 499px;">Changes the value of status column in table EmploymentRecord.<br>Accept changes status to 2.<br>Decline changes status to 3.</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">viewClientProfile.java</td>
+    <td style="width: 499px;">Shows the client's profile.</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">clientDataMoni.java</td>
+    <td style="width: 499px;">Reads data from table Client.</td>
+</tr>
+
+<td style="width: 806px;" colspan="3">Caregiver settings (<a href="caregiverSettings">caregiverSettings.java</a>)</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Description:<br> This function shows a form for updating the caregivers information. </td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 719px;" colspan="2">Use:<br>In the first login select caregiver tab and use the following data:<br>user: josephine@darak.org<br>password: 3Mz)4Zj+<br>or any caregiver data.</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">caregiverDataMoni.java</td>
+    <td style="width: 499px;">Reads data from tables Caregiver and caregiverProvinces.<br>Updates the table Caregiver.</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">caregiverUpdate.java</td>
+    <td style="width: 499px;">Takes data from the form and saves it in the data constructor so it can be used to update the tables Caregiver and caregiverProvinces .</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">provincesDataMoni.java</td>
+    <td style="width: 499px;">Reads data from table caregiverProvinces.<br>Inserts in the table caregiverProvinces.<br>Updates the table caregiverProvinces.</td>
+</tr>
+
+<td style="width: 806px;" colspan="3">Caregiver warnings (<a href="caregiverWarnings">caregiverWarnings.java</a>)</td>
+</tr>
+<tr>
+<td style="width: 87px;"></td>
+<td style="width: 719px;" colspan="2">Description:<br> This function shows a list of the warnings made by the administrators and a button to mark this warning as seen. </td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 719px;" colspan="2">Use:<br>In the login form select caregiver tab and use the following data:<br>user: simona@morasca.com<br>password: 6Jy%6Tf&<br>and on the side menu click on Jobs - Warnings</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">warningDataMoni.java</td>
+    <td style="width: 499px;">Reads data from tables Caregiver, Notice, WarningToCaregiver and EmploymentRecord.<br>WarningToCaregiver.</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">caregiverWarnings.java</td>
+    <td style="width: 499px;">Uses JavaScript for showing the list of warnings and the "seen" button.(createWarningList.js)</td>
+</tr>
+<tr>
+    <td style="width: 87px;"></td>
+    <td style="width: 220px;">seen.java</td>
+    <td style="width: 499px;">Updates table WarningToCaregiver.</td>
+</tr>
+
+</tbody>
+</table>
+<p></p></body></html>
+
