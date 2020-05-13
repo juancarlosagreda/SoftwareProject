@@ -10,7 +10,7 @@ public class clientReviewsPage extends HttpServlet {
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config); 
-        connection = ConnectionUtilsAle.getConnection(config);
+        connection = ConnectionUtils.getConnection(config);
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException  {
@@ -74,7 +74,7 @@ public class clientReviewsPage extends HttpServlet {
 		toClient.println("<li><a href='clientMessagesAle'><i class='icon-material-outline-dashboard'></i> Messages</a></li>");
 		toClient.println("<li><a href='clientJobs'><i class='icon-material-outline-dashboard'></i> Active Jobs</a></li>");
 		toClient.println("<li><a href='clientSettings'><i class='icon-material-outline-settings'></i> Settings</a></li>");
-		toClient.println("<li><a href='INICIOALE.html'><i class='icon-material-outline-power-settings-new'></i> Logout</a></li>");
+		toClient.println("<li><a href='INICIO.html'><i class='icon-material-outline-power-settings-new'></i> Logout</a></li>");
 		toClient.println("</ul>");
 		
 		toClient.println("</div>");

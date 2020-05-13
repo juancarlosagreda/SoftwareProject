@@ -10,7 +10,7 @@ public class insertReviewAle extends HttpServlet {
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        connection = ConnectionUtilsAle.getConnection(config);
+        connection = ConnectionUtils.getConnection(config);
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException  {
