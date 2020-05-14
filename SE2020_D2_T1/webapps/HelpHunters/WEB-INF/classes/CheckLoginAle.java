@@ -33,7 +33,7 @@ public class CheckLoginAle extends HttpServlet {
             res.sendRedirect("clientHome");
         } else {
 			toClient.println("<p style = 'color:red'> Incorrect Username/Password, Try Again. </p>");
-			res.sendRedirect("INICIOALE.html");
+			res.sendRedirect("INICIO.html");
 
             }
            
