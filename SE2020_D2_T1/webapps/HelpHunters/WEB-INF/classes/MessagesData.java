@@ -57,23 +57,25 @@ public class MessagesData {
     
     
     // Constructor reducir y con diferencia de dias - DATE COMO DATE
-    MessagesData (String name, String clientID, String caregiverID, String subject, String DateDiff,Date datecreated){
+    MessagesData (String name, String clientID, String caregiverID, String subject, String DateDiff,Date datecreated, String reply){
         this.name = name;
         this.clientID = clientID;
 		this.caregiverID = caregiverID;
         this.subject = subject;
         this.DateDiff = DateDiff;
         this.datecreated = datecreated;
+        this.reply = reply;
     }
     
     // Constructor reducir y con diferencia de dias - DATE COMO STRING
-    MessagesData (String name, String clientID, String caregiverID, String subject, String DateDiff,String strDateCreated){
+    MessagesData (String name, String clientID, String caregiverID, String subject, String DateDiff,String strDateCreated, String reply){
         this.name = name;
         this.clientID = clientID;
 		this.caregiverID = caregiverID;
         this.subject = subject;
         this.DateDiff = DateDiff;
         this.strDateCreated = strDateCreated;
+        this.reply = reply;
     }
     
     // Constructor no-reducidor y con diferencia de dias - DATE COMO DATE
@@ -95,7 +97,7 @@ public class MessagesData {
         
         System.out.println("ID?: " + caregiverID);
         
-        String sql = "SELECT CONCAT(c.firstname, ' ', c.lastname) AS name,m.clientID,caregiverID,subject,DATEDIFF(CURRENT_DATE, datecreated) AS DateDiff, datecreated FROM Message m JOIN Client c ON c.clientID = m.clientID WHERE m.caregiverID = ? ORDER BY DateDiff ASC;";
+        String sql = "SELECT Client.firstname &  ' ' & Client.lastname AS name,Message.clientID,Message.caregiverID,datecreated,subject,DateDiff('d',[datecreated],DATE()) as DateDiff, reply FROM Message INNER JOIN Client ON Client.clientID = Message.clientID WHERE Message.caregiverID = ? ORDER BY datecreated desc;";
         
         System.out.println("getCaregiverMessages: " + sql);
         
@@ -114,7 +116,8 @@ public class MessagesData {
                     result.getString("caregiverID"),
                     result.getString("subject"),
                     result.getString("DateDiff"),
-                    result.getDate("datecreated")
+                    result.getDate("datecreated"),
+                    result.getString("reply")
                 );
                 
                 vec.addElement(msg);
@@ -134,7 +137,7 @@ public class MessagesData {
         
         System.out.println("Info?: " + caregiverID + clientID + subject);
         
-        String sql = "SELECT CONCAT(c.firstname, ' ', c.lastname) AS name,DATEDIFF(CURRENT_DATE, datecreated) AS DateDiff, m.* FROM Message m JOIN Client c ON c.clientID = m.clientID WHERE caregiverID = ? AND subject = ? AND m.clientID = ? ORDER BY DateDiff ASC;";
+        String sql = "SELECT Client.firstname &  ' ' & Client.lastname AS name, DateDiff('d',[datecreated],DATE()) as DateDiff, Message.* FROM Message INNER JOIN Client ON Client.clientID = Message.clientID WHERE Message.caregiverID = ? AND Message.subject = ? AND Message.clientID = ? ORDER BY datecreated desc;";
         
         System.out.println("getMessage: " + sql);
         

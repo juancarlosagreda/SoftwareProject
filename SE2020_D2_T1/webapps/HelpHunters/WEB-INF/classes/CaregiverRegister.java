@@ -14,7 +14,7 @@ public class CaregiverRegister extends HttpServlet {
         //Connect to the database cuando inicializamos el servlet
 		//Usa el primero porque hay un input argument		
 		super.init(config);
-        connection = ConnectionUtilsMoni.getConnection(config);
+        connection = ConnectionUtils.getConnection(config);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

@@ -739,21 +739,20 @@ public class CaregiverUtilsCori {
         }
         
         
-        str.append("							<li><a href='dashboard-reviews-caretaker.html'><i class='icon-material-outline-rate-review'></i> Reviews</a></li>");
+        str.append("							<li><a href='caregiverReviews'><i class='icon-material-outline-rate-review'></i> Reviews</a></li>");
         str.append("						</ul>");
         str.append("");
-        str.append("						<ul data-submenu-title='Organize and Manage'>");
-        str.append("							<li><a href='#'><i class='icon-material-outline-business-center'></i> Jobs</a>");
-        str.append("								<ul>");
-        str.append("									<li><a href='dashboard-manage-jobs.html'>Manage Jobs <span class='nav-tag'>3</span></a></li>");
-        str.append("								</ul>");
-        str.append("							</li>");
-        str.append("");
-        str.append("						</ul>");
-        str.append("");
-        str.append("						<ul data-submenu-title='Account'>");
-        str.append("							<li><a href='dashboard-settings-caretaker.html'><i class='icon-material-outline-settings'></i> Settings</a></li>");
-        str.append("							<li><a href='index-logged-out.html'><i class='icon-material-outline-power-settings-new'></i> Logout</a></li>");
+        str.append("<ul data-submenu-title='Organize and Manage'>");
+		str.append("<li><a href='#'><i class='icon-material-outline-business-center'></i> Jobs</a>");
+		str.append("<ul>");
+		str.append("<li><a href='caregiverJobs'>Manage Jobs </a></li>");
+		str.append("<li><a href='caregiverWarnings'>Warnings </a></li>");
+		str.append("</ul>");
+		str.append("</li>");
+		str.append("</ul>");
+		str.append("<ul data-submenu-title='Account'>");
+        str.append("							<li><a href='caregiverSettings'><i class='icon-material-outline-settings'></i> Settings</a></li>");
+        str.append("							<li><a href='LogoutMoni'><i class='icon-material-outline-power-settings-new'></i> Logout</a></li>");
         str.append("						</ul>");
         str.append("");
         str.append("					</div>");

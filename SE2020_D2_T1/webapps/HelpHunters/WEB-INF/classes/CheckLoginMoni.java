@@ -13,7 +13,7 @@ public class CheckLoginMoni extends HttpServlet {
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        connection = ConnectionUtilsMoni.getConnection(config);
+        connection = ConnectionUtils.getConnection(config);
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException  {
@@ -30,9 +30,9 @@ public class CheckLoginMoni extends HttpServlet {
             session.setAttribute("login", logged);
 			session.setAttribute("id", loggedid);
 			session.setAttribute("password", password);
-            res.sendRedirect("caregiverReviews");
+            res.sendRedirect("Dashboard");
         } else {
-            res.sendRedirect("INICIOMoni.html");
+            res.sendRedirect("INICIO.html");
             }
            
         }

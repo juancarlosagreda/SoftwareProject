@@ -13,7 +13,7 @@ public class Dashboard extends HttpServlet {
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        connection = ConnectionUtilsCori.getConnection(config);
+        connection = ConnectionUtils.getConnection(config);
     }
     
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException  {
@@ -23,8 +23,10 @@ public class Dashboard extends HttpServlet {
 		
 		HttpSession session = req.getSession(true);
         String login = null;
+        int id = 0;
         if (session != null) {
-            login = (String)session.getAttribute("login");
+            id = (int)session.getAttribute("id");
+            login = String.valueOf(id);
             System.out.println("logged");
             System.out.println("login: " + login);
         }

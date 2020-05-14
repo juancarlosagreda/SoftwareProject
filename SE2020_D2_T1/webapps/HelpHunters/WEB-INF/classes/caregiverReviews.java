@@ -11,7 +11,7 @@ public class caregiverReviews extends HttpServlet {
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        connection = ConnectionUtilsMoni.getConnection(config);
+        connection = ConnectionUtils.getConnection(config);
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException  {

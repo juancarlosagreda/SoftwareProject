@@ -13,7 +13,7 @@ public class CaregiverMsg extends HttpServlet {
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        connection = ConnectionUtilsCori.getConnection(config);
+        connection = ConnectionUtils.getConnection(config);
     }
     
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException  {
@@ -23,8 +23,10 @@ public class CaregiverMsg extends HttpServlet {
 		
 		HttpSession session = req.getSession(false);
         String login = null;
+        int id = 0;
         if (session != null) {
-            login = (String)session.getAttribute("login");
+            id = (int)session.getAttribute("id");
+            login = String.valueOf(id);
             System.out.println("logged");
             System.out.println("login: " + login);
         }
@@ -96,6 +98,8 @@ public class CaregiverMsg extends HttpServlet {
         } else {
             for(int i=0; i<caregiverMessagesData.size(); i++){
                 MessagesData message = caregiverMessagesData.elementAt(i);
+                
+                String temp = caregiverMessagesData.elementAt(i).reply;
 
                 System.out.println("En el bucle:" + i);
 
@@ -106,11 +110,17 @@ public class CaregiverMsg extends HttpServlet {
 
                 toClient.println("									<a href='"+link+"'>");
 
-                toClient.println("										<div class='message-avatar'></div>");
+                toClient.println("										<div class='message-avatar'>");
+                
+                if (isNull(temp) || temp == null || temp == "null" || temp == "Null"){
+                    toClient.println("<img src='urgent.png' alt=''>");
+                }
+                
+                toClient.println("</div>");
                 toClient.println("										<div class='message-by'>");
                 toClient.println("											<div class='message-by-headline'>");
 
-                toClient.println("												<h5>"+message.name+"</h5>");
+                toClient.println("												<span class='nav-tag'>!</span><h5>"+message.name+"</h5>");
 
                 if (Integer.parseInt(message.DateDiff) > 10){
                     toClient.println("												<span>"+message.datecreated+"</span>");
@@ -187,5 +197,8 @@ public class CaregiverMsg extends HttpServlet {
         
     }
 
-
+    private boolean isNull(Object obj) {
+        return obj == null;
+    }
+    
 }

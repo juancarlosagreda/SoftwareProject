@@ -20,7 +20,7 @@ public class caregiverDataCori {
     Date   birthdate;
     Integer     enrollmentstatus;
 
-    caregiverData (Integer caregiverID, String firstname, String lastname, String email, String password, Integer  gender, Integer  available, float  hourlyrate, String description, Date birthdate, Integer  enrollmentstatus) {
+    caregiverDataCori (Integer caregiverID, String firstname, String lastname, String email, String password, Integer  gender, Integer  available, float  hourlyrate, String description, Date birthdate, Integer  enrollmentstatus) {
 		this.caregiverID = caregiverID;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -34,7 +34,7 @@ public class caregiverDataCori {
         this.enrollmentstatus = enrollmentstatus;
     }
 	
-   public static int insertCaregiver(Connection connection, caregiverData caregiver) {
+   public static int insertCaregiver(Connection connection, caregiverDataCori caregiver) {
         String sql ="INSERT INTO Caregiver (firstname, lastname, email, password, gender, hourlyrate, description, birthdate)"
             + "VALUES (?,?,?,?,?,?,?,?)";
         System.out.println("insertCaregiver: " + sql);

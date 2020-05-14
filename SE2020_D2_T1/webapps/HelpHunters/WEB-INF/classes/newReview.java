@@ -11,7 +11,7 @@ public class newReview extends HttpServlet {
 	
 	public void init(ServletConfig config) throws ServletException {	
 		super.init(config);
-        connection = ConnectionUtilsMoni.getConnection(config);
+        connection = ConnectionUtils.getConnection(config);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

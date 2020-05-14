@@ -13,7 +13,7 @@ public class NotesCaregiver extends HttpServlet {
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        connection = ConnectionUtilsCori.getConnection(config);
+        connection = ConnectionUtils.getConnection(config);
     }
     
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException  {
@@ -23,8 +23,10 @@ public class NotesCaregiver extends HttpServlet {
 		
 		HttpSession session = req.getSession(false);
         String login = null;
+        int id = 0;
         if (session != null) {
-            login = (String)session.getAttribute("login");
+            id = (int)session.getAttribute("id");
+            login = String.valueOf(id);
             System.out.println("logged");
             System.out.println("login: " + login);
         }
@@ -117,7 +119,7 @@ public class NotesCaregiver extends HttpServlet {
 //            }
 
 
-            toClient.println("									<span class='note-priority "+priority+"'>"+ note.status +"</span>");
+            toClient.println("<span class='note-priority "+priority+"'>"+ note.status +"</span>");
             toClient.println("									<div class='note-buttons'>");
             toClient.println("										<a href='CaregiverNoteEdit?noteID="+note.noteID+"' title='Edit' data-tippy-placement='top'><i class='icon-feather-edit'></i></a>");
             toClient.println("									</div>");
@@ -131,7 +133,7 @@ public class NotesCaregiver extends HttpServlet {
         toClient.println("");
         toClient.println("						</div>");
         toClient.println("							<div class='add-note-button'>");
-        toClient.println("								<a href='CaregiverNoteInsert' class='popup-with-zoom-anim button full-width button-sliding-icon'>Add Note <i class='icon-material-outline-arrow-right-alt'></i></a>");
+        toClient.println("								<a href='CaregiverNoteInsert'>Add Note<i class='icon-material-outline-arrow-right-alt'></i></a>");
         toClient.println("							</div>");
         toClient.println("					</div>");
         toClient.println("					<!-- Dashboard Box / End -->");

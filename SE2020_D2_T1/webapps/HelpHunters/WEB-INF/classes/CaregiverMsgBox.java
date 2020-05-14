@@ -13,7 +13,7 @@ public class CaregiverMsgBox extends HttpServlet {
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        connection = ConnectionUtilsCori.getConnection(config);
+        connection = ConnectionUtils.getConnection(config);
     }
     
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException  {
@@ -23,8 +23,10 @@ public class CaregiverMsgBox extends HttpServlet {
 		
 		HttpSession session = req.getSession(false);
         String login = null;
+        int id = 0;
         if (session != null) {
-            login = (String)session.getAttribute("login");
+            id = (int)session.getAttribute("id");
+            login = String.valueOf(id);
             System.out.println("logged");
             System.out.println("login: " + login);
         }
@@ -36,6 +38,7 @@ public class CaregiverMsgBox extends HttpServlet {
         
      
         toClient.println(CaregiverUtilsCori.headerCaregiverDashboardDespuesDePerfil(login, "messages"));
+        
         
 
         toClient.println("");
@@ -53,7 +56,6 @@ public class CaregiverMsgBox extends HttpServlet {
         toClient.println("				<nav id='breadcrumbs' class='dark'>");
         toClient.println("					<ul>");
         toClient.println("						<li><a href='#'>Home</a></li>");
-        toClient.println("						<li><a href='#'>Dashboard</a></li>");
         toClient.println("						<li>Messages</li>");
         toClient.println("					</ul>");
         toClient.println("				</nav>");
@@ -76,6 +78,8 @@ public class CaregiverMsgBox extends HttpServlet {
         
         Vector<MessagesData> caregiverMessagesData;
         caregiverMessagesData = MessagesData.getCaregiverMessages(connection,login);
+        
+        
             
         // EMPIEZA EL BUCLE 
         
@@ -102,6 +106,8 @@ public class CaregiverMsgBox extends HttpServlet {
         } else {
             for(int i=0; i<caregiverMessagesData.size(); i++){
                 MessagesData message = caregiverMessagesData.elementAt(i);
+                
+                String temp = caregiverMessagesData.elementAt(i).reply;
 
                 System.out.println("En el bucle:" + i);
                 
@@ -116,7 +122,13 @@ public class CaregiverMsgBox extends HttpServlet {
 
                 toClient.println("									<a href='"+link+"'>");
 
-                toClient.println("										<div class='message-avatar'></div>");
+                toClient.println("										<div class='message-avatar'>");
+                
+                if (isNull(temp) || temp == null || temp == "null"){
+                    toClient.println("<img src='urgent.png' alt=''>");
+                }
+                
+                toClient.println("</div>");
                 toClient.println("										<div class='message-by'>");
                 toClient.println("											<div class='message-by-headline'>");
 
@@ -145,6 +157,8 @@ public class CaregiverMsgBox extends HttpServlet {
         messageData = MessagesData.getMessage(connection,caregiverID,clientID,subject);
         
         MessagesData message = messageData.elementAt(0);
+        
+        String temp = messageData.elementAt(0).reply;
         
         toClient.println("							</ul>");
         toClient.println("						</div>");
@@ -189,16 +203,24 @@ public class CaregiverMsgBox extends HttpServlet {
         toClient.println("");
         
         //CONTESTACION
-        System.out.println("el reply sale como: " + message.reply);
-        
         
         toClient.println("									<div class='message-bubble me'>");
         toClient.println("										<div class='message-bubble-inner'>");
         toClient.println("											<div class='message-avatar'></div>");
         
         
-        if (message.reply.isEmpty()){
+        
+        //System.out.println("Antes del if y el valor para temp es: " + temp);
+        
+        //System.out.println("Prueba 1: " + temp.isEmpty());
+        System.out.println("Prueba 2: " + isNull(temp));
+        System.out.println("Prueba 3: " + (temp == null));
+        System.out.println("Prueba 4: " + (temp == "null"));
+        System.out.println("Prueba 4: " + temp);
+        
+        if (isNull(temp) || temp == null || temp == "null" || temp == "Null"){
             System.out.println("Entraste al if!");
+            
             
         } else {
             toClient.println("											<div class='message-text'><p>"+message.reply+"</p></div>");
@@ -215,7 +237,9 @@ public class CaregiverMsgBox extends HttpServlet {
         toClient.println("									</div>");
          toClient.println("							<!-- Reply Area -->");
         
-        if (message.reply.isEmpty()){
+        if (isNull(temp) || temp == null || temp == "null" || temp == "Null"){
+            
+            System.out.println("ENTRASTE A DONDE SE PONRIA EL FORMULARIO");
             toClient.println("<form action='sendReply' method='GET'>");  
             toClient.println("							<div class='message-reply'>");      
             toClient.println("								<textarea name='reply' id='reply' cols='1' rows='1' placeholder='Your Message' data-autoresize></textarea>");
@@ -292,6 +316,10 @@ public class CaregiverMsgBox extends HttpServlet {
         toClient.println(CaregiverUtilsCori.footerCaregiverDashboard());
         
     }
+    
+    private boolean isNull(Object obj) {
+    return obj == null;
+}
 
 
 }

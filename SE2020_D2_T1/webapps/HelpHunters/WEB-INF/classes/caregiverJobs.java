@@ -11,7 +11,7 @@ public class caregiverJobs extends HttpServlet {
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        connection = ConnectionUtilsMoni.getConnection(config);
+        connection = ConnectionUtils.getConnection(config);
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException  {
@@ -133,7 +133,7 @@ public class caregiverJobs extends HttpServlet {
 
         }
 		toClient.println("]</script>");
-        toClient.println("<script src='js/createJobList.js'></script>");
+        toClient.println("<script src='createJobList.js'></script>");
 
 		toClient.println("</ul>");
 		toClient.println("</div>");
