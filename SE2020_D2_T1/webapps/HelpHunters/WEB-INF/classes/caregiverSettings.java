@@ -46,8 +46,9 @@ public class caregiverSettings extends HttpServlet {
 		toClient.println("<div class='dashboard-nav'>");
 		toClient.println("<div class='dashboard-nav-inner'>");
 		toClient.println("<ul data-submenu-title='Start'>");
-		toClient.println("<li><a href='dashboard'><i class='icon-material-outline-dashboard'></i> Dashboard</a></li>");
-		toClient.println("<li><a href='caregiverMessages'><i class='icon-material-outline-question-answer'></i> Messages </a></li>");
+		toClient.println("<li><a href='Dashboard'><i class='icon-material-outline-dashboard'></i> Dashboard</a></li>");
+		toClient.println("<li><a href='CaregiverMsg'><i class='icon-material-outline-question-answer'></i> Messages </a></li>");
+		toClient.println("<li><a href='NotesCaregiver'><i class='icon-material-outline-note-add'></i> Notes </a></li>");
 		toClient.println("<li ><a href='caregiverReviews'><i class='icon-material-outline-rate-review'></i> Reviews</a></li>");
 		toClient.println("</ul>");
 		toClient.println("<ul data-submenu-title='Organize and Manage'>");
@@ -73,8 +74,8 @@ public class caregiverSettings extends HttpServlet {
 		toClient.println("<h3>Settings</h3>");
 		toClient.println("<nav id='breadcrumbs' class='dark'>");
 		toClient.println("<ul>");
-		toClient.println("<li><a href='INICIOMoni.html'>Home</a></li>");
-		toClient.println("<li><a href='#'>Dashboard</a></li>");
+		toClient.println("<li><a href='INICIO.html'>Home</a></li>");
+		toClient.println("<li><a href='Dashboard'>Dashboard</a></li>");
 		toClient.println("<li>Settings</li>");
 		toClient.println("</ul>");
 		toClient.println("</nav>");

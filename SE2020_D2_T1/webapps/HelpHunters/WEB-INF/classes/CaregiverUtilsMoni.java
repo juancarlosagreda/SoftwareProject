@@ -38,8 +38,7 @@ public class CaregiverUtilsMoni {
 		str.append("</div>");
 		str.append("</div>");
 		str.append("<ul class='user-menu-small-nav'>");
-		str.append("<li><a href='dashboard'><i class='icon-material-outline-dashboard'></i> Dashboard</a></li>");
-		str.append("<li><a href='caregiverProfile'><i class='icon-material-outline-face'></i> View my Profile </a></li>");
+		str.append("<li><a href='Dashboard'><i class='icon-material-outline-dashboard'></i> Dashboard</a></li>");
 		str.append("<li><a href='caregiverSettings'><i class='icon-material-outline-settings'></i> Settings</a></li>");
 		str.append("<li><a href='LogoutMoni'><i class='icon-material-outline-power-settings-new'></i> Logout</a></li>");
 		str.append("</ul>");

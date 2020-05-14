@@ -46,8 +46,9 @@ public class caregiverWarnings extends HttpServlet {
 		toClient.println("<div class='dashboard-nav'>");
 		toClient.println("<div class='dashboard-nav-inner'>");
 		toClient.println("<ul data-submenu-title='Start'>");
-		toClient.println("<li><a href='dashboard'><i class='icon-material-outline-dashboard'></i> Dashboard</a></li>");
-		toClient.println("<li><a href='caregiverMessages'><i class='icon-material-outline-question-answer'></i> Messages </a></li>");
+		toClient.println("<li><a href='Dashboard'><i class='icon-material-outline-dashboard'></i> Dashboard</a></li>");
+		toClient.println("<li><a href='CaregiverMsg'><i class='icon-material-outline-question-answer'></i> Messages </a></li>");
+		toClient.println("<li><a href='NotesCaregiver'><i class='icon-material-outline-note-add'></i> Notes </a></li>");
 		toClient.println("<li ><a href='caregiverReviews'><i class='icon-material-outline-rate-review'></i> Reviews</a></li>");
 		toClient.println("</ul>");
 		toClient.println("<ul data-submenu-title='Organize and Manage'>");
@@ -73,8 +74,8 @@ public class caregiverWarnings extends HttpServlet {
 		toClient.println("<h3>Warnings</h3>");
 		toClient.println("<nav id='breadcrumbs' class='dark'>");
 		toClient.println("<ul>");
-		toClient.println("<li><a href='INICIOMoni.html'>Home</a></li>");
-		toClient.println("<li><a href='#'>Dashboard</a></li>");
+		toClient.println("<li><a href='INICIO.html'>Home</a></li>");
+		toClient.println("<li><a href='Dashboard'>Dashboard</a></li>");
 		toClient.println("<li>Warnings</li>");
 		toClient.println("</ul>");
 		toClient.println("</nav>");
@@ -128,7 +129,7 @@ public class caregiverWarnings extends HttpServlet {
 
 		}
 		toClient.println("]</script>");
-        toClient.println("<script src='createWarningList.js'></script>");
+        toClient.println("<script src='js/createWarningList.js'></script>");
 
 
 		toClient.println("</ul>");
@@ -137,7 +138,7 @@ public class caregiverWarnings extends HttpServlet {
 		toClient.println("</div>");
 		toClient.println("</div>");
 
-        toClient.println(CaregiverUtilsMoni.footer("Products"));
+        toClient.println(CaregiverUtilsMoni.footer(login));
 		toClient.println("</div>");
 		toClient.println(CaregiverUtilsMoni.script(login));
 
