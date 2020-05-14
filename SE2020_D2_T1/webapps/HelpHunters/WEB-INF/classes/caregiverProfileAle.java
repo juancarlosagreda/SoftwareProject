@@ -94,7 +94,7 @@ public class caregiverProfileAle extends HttpServlet {
 		toClient.println("<div class='col-xl-4 col-lg-4'>");
 		toClient.println("<div class='sidebar-container'>");
 		toClient.println("<!-- Button -->");
-		toClient.println("<a href='#' class='apply-now-button popup-with-zoom-anim margin-bottom-50'> Offer a Job <i class='icon-material-outline-arrow-right-alt'></i></a>");
+		toClient.println("<a href='OfferJob.html?caregiverID="+caregiverID+"&firstname="+firstname+"&lastname="+lastname+"&hourlyrate="+hourlyrate+"' class='apply-now-button'> Offer a Job <i class='icon-material-outline-arrow-right-alt'></i></a>");
 		toClient.println("<a href='#small-dialog' class='apply-now-button popup-with-zoom-anim margin-bottom-50'> Send a Message <i class='icon-material-outline-arrow-right-alt'></i></a>");
 		toClient.println("</div>");
 		toClient.println("</div>");

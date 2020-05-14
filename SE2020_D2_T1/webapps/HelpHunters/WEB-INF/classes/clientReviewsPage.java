@@ -72,9 +72,11 @@ public class clientReviewsPage extends HttpServlet {
 		toClient.println("<li><a href='clientProfile'><i class='icon-material-outline-face'></i> View my Profile </a></li>");
 		toClient.println("<li><a href='clientReviewsPage'><i class='icon-material-outline-rate-review'></i> Reviews</a></li>");
 		toClient.println("<li><a href='clientMessagesAle'><i class='icon-material-outline-dashboard'></i> Messages</a></li>");
-		toClient.println("<li><a href='clientJobs'><i class='icon-material-outline-dashboard'></i> Active Jobs</a></li>");
-		toClient.println("<li><a href='clientSettings'><i class='icon-material-outline-settings'></i> Settings</a></li>");
-		toClient.println("<li><a href='INICIO.html'><i class='icon-material-outline-power-settings-new'></i> Logout</a></li>");
+		toClient.println("<li><a href='ViewNotices.html'><i class='icon-feather-send'></i> Notices</a></li>");
+		toClient.println("<li><a href='JobOffersDetail.html'><i class='icon-material-outline-business-center'></i> Job Offers</a></li>");
+		toClient.println("<li><a href='ClientSettings.html'><i class='icon-material-outline-settings'></i> Settings</a></li>");
+		toClient.println("<li><a onclick = 'logout()'><i class='icon-material-outline-power-settings-new'></i> Logout</a></li>");
+		
 		toClient.println("</ul>");
 		
 		toClient.println("</div>");
